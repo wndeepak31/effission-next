@@ -5,7 +5,7 @@ const TrustSection = () => {
   const logos = [
     { name: 'asianpaints', label: 'asianpaints' },
     { name: 'Berger-paints', label: 'Berger' },
-    { name: 'AkzoNobel', label: 'AkzoNobel' },
+    { name: 'AkzoNobel-logo', label: 'AkzoNobel' },
     { name: 'KANSAI NEROLAC', label: 'KANSAI NEROLAC' },
     { name: 'Colgate-Palmolive', label: 'Colgate-Palmolive' },
     { name: 'Unilever', label: 'Unilever' },
