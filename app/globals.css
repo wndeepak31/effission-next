@@ -1,0 +1,2684 @@
+:root {
+    /* --color-primary: #27E3FF; */
+    --color-text-light: #F8FAFB;
+    --color-text-opacity: rgba(248, 250, 251, 0.85);
+    /* 85% of F8FAFB */
+    --color-bg-dark: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header & Navigation */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    /* Reduced padding from edge compared to hero text */
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    /* border-bottom: 1px solid rgba(39, 227, 255, 0.3); */
+    /* The full blue top border visible in Figma image 1? Actually the blue bar is just at the top of the dark section, or it's a top-border. Wait, image 1 shows a thin blue line going across under the nav, or is it above? Let's just use a top border on nav active item. */
+    /* Removing generic horizontal line below navbar */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 38px 0;
+    /* To match 100px header height and standard alignment */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.nav-links a.active {
+    color: var(--color-text-light);
+    /* Or white */
+}
+
+.nav-links a.active::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    /* Pull it to the top of the header border */
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-primary);
+    border-radius: 2px 2px 0 0;
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid white;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.search-btn,
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger Icon */
+.menu-btn {
+    display: none;
+    /* Desktop hidden */
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #F8FAFB;
+    border-radius: 2px;
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+.menu-btn.active .hamburger span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.menu-btn.active .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active .hamburger span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000000;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        padding-left: 0;
+    }
+
+    .nav.mobile-active {
+        transform: translateY(0);
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+        padding: 10px 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    /* From Figma layout bounds */
+
+    display: flex;
+    align-items: flex-end;
+    /* Align to the padding settings */
+    padding: 282px 220px 220px 210px;
+    /* Top, Right, Bottom, Left based on layout */
+}
+
+/* Dark gradient overlay to ensure text readability on image if needed */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1009px;
+    /* Width of the text box in Figma */
+}
+
+.hero-title {
+    font-family: 'Zalando Sans', sans-serif;
+    /* Fallback for Zalando Sans */
+    font-weight: 500;
+    /* Medium */
+    font-size: 62px;
+    line-height: 72px;
+    /* 72px exactly */
+    letter-spacing: 3px;
+    color: var(--color-text-opacity);
+    margin-bottom: 24px;
+}
+
+.hero-divider {
+    width: 100%;
+    max-width: 1000px;
+    height: 1px;
+    background-color: rgba(248, 250, 251, 0.4);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* A slight gradient or dash to the right from the design */
+.hero-divider::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 40px;
+    height: 6px;
+    border-top: 1px dashed var(--color-primary);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    width: 148px;
+    /* Fixed Hug layout */
+    height: 30px;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 600;
+    /* SemiBold */
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: #27E3FF;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn span {
+    display: inline-block;
+}
+
+.cta-arrow {
+    margin-left: 8px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.cta-btn:hover {
+    opacity: 0.8;
+    transform: translateX(4px);
+}
+
+/* --- Global Section & Indicators Layout --- */
+.section-indicator {
+    position: absolute;
+    left: 80px;
+    /* From the edge of the screen, placed before the 210px padding */
+    top: 0;
+    bottom: 0;
+    width: 88px;
+    z-index: 10;
+    /* Ensures the line safely traverses OVER dark blocks and components */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indicator-line {
+    width: 1px;
+    background-color: rgba(248, 250, 251, 0.3);
+}
+
+.line-top {
+    flex: 0 0 40%;
+    /* Line takes up the top 40% until the mid point */
+}
+
+.value-chain .line-top,
+.footprint .line-top {
+    flex: 0 0 100px;
+    /* Forces exactly the drop anchoring it horizontally next to the title */
+}
+
+.line-bottom {
+    flex: 1;
+    /* Fills remaining space below */
+}
+
+.section-indicator.is-first {
+    top: 40%;
+    /* Pushes the starting point to the middle of the hero section */
+}
+
+.section-indicator.is-end {
+    bottom: 30px;
+    /* Spacing from bottom of section as per user request */
+}
+
+.indicator-content {
+    font-family: 'Lexend Giga', sans-serif;
+    color: var(--color-text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 16px 0;
+    /* Creates natural space up and down between the lines so it doesn't cross over text */
+    background: transparent;
+    position: relative;
+}
+
+.indicator-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin: 8px auto;
+    /* Centered dot without affecting parent alignment */
+}
+
+.indicator-num {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.indicator-label {
+    font-size: 14px;
+    font-weight: 300;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+/* --- Section 2: About Us --- */
+.about-us {
+    position: relative;
+    width: 100%;
+    height: 698px;
+    /* Based on Figma fixed layout 698px height */
+
+    display: flex;
+    align-items: center;
+    padding: 174px 658px 157px 214px;
+    /* Padding Top 174, Right 658, Bottom 157, Left 214 */
+}
+
+/* Gradient overlay for industrial look */
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 578px;
+    /* Layout width 578 */
+}
+
+.about-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 300;
+    /* Light */
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #27E3FF;
+    /* #27E3FF */
+    margin-bottom: 40px;
+}
+
+.about-body {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.25px;
+    letter-spacing: 0.3px;
+    /* 1.5% of 20px is 0.3px */
+    color: var(--color-text-light);
+    margin-bottom: 50px;
+}
+
+.about-footer {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.26px;
+    /* 1% of 26px */
+    color: #27E3FF;
+}
+
+/* --- Section 3: Capacity --- */
+.capacity {
+    position: relative;
+    width: 100%;
+    height: 753px;
+    /* From Figma layout bounds */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 214px;
+    /* Setting left padding to 214px natively */
+}
+
+/* Dark gradient overlay for section 3 */
+.capacity::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+.capacity-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.capacity-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    /* Medium */
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: var(--color-text-light);
+    /* White */
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    max-width: 1034px;
+}
+
+.stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 215px;
+    /* Deep Glassmorphic styling based on Figma blur cards */
+    background: rgba(75, 134, 145, 0.2);
+    /* #4B8691 at 20% */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle inner border */
+    border-radius: 4px;
+    padding: 0 60px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat-number {
+    font-family: 'Zalando Sans', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -2px;
+    color: #27E3FF;
+    /* Cyan accents */
+}
+
+.stat-text {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--color-text-light);
+    opacity: 0.9;
+}
+
+/* --- Section 4: Value Chain --- */
+.value-chain {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.value-chain-header {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 345px;
+    /* Specific Figma block height restored to header child */
+    background: #231F20;
+    /* Dark block shifted to inner header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 57px;
+    /* Top text spacing */
+}
+
+.vc-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #FFFFFF;
+    max-width: 778px;
+    text-align: center;
+    margin-bottom: 15px;
+    /* Perfect top to subtitle offset */
+}
+
+.vc-subtitle {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.25px;
+    /* Exact line height from Figma */
+    letter-spacing: 0.2px;
+    /* 1% letter spacing */
+    color: #27E3FF;
+    /* Cyan text */
+    max-width: 732px;
+    text-align: center;
+}
+
+.vc-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: auto;
+    /* Pushes the tabs flush to the bottom of the 345px header box */
+    align-items: flex-end;
+    /* Ensures the 24px and 48px height tabs align seamlessly at the bottom */
+}
+
+.vc-tab {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    /* Inactive Figma design specs */
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    padding: 3px 20px;
+    /* Padding for horizontal buffer */
+    background: #5E5C5D;
+    /* Specific dark inactive Figma fill */
+    color: #27E3FF;
+    /* Cyan text when inactive */
+    border: none;
+    border-radius: 16px 16px 0 0;
+    /* Strictly rounded top corners only */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 48px;
+    /* Standardize standard height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vc-tab.active {
+    font-size: 20px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    /* Strong negative letter spacing on active */
+    background: #27E3FF;
+    color: #231F20;
+    /* Dark inner text */
+}
+
+/* --- Dynamic Tab Layout --- */
+.tab-content-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    position: relative;
+    width: 100%;
+    height: 651px;
+    /* Figma Exact Height Requirement for image tab component */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 37px;
+    /* Figma top component dimension constraint */
+}
+
+.tab-description {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.25px;
+    /* Figma explicit height */
+    letter-spacing: 0.3px;
+    /* Exactly 1.5% mapping standard */
+    color: #FFFFFF;
+    text-align: center;
+    max-width: 588px;
+}
+
+.tab-cta {
+    position: absolute;
+    bottom: 73px;
+    /* Fixed button absolute placement matching layout constraint */
+    width: 187px;
+    height: 50px;
+    border: 1px solid #27E3FF;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-cta:hover {
+    background: rgba(39, 227, 255, 0.1);
+    /* Subtle hover feedback */
+}
+
+/* --- Section 5: Products Slider --- */
+.products {
+    position: relative;
+    width: 100%;
+    height: 845px;
+    /* From Figma container bound */
+    background: #e5e5e5;
+    /* Very light grey matching inverted context */
+    overflow: hidden;
+}
+
+.products-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.products-title {
+    position: absolute;
+    top: 144px;
+    left: 209px;
+    width: 778px;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: rgba(35, 31, 32, 0.8);
+    /* #231F20 80% */
+}
+
+.products-subtitle {
+    position: absolute;
+    top: 253px;
+    left: 210px;
+    width: 915px;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29.25px;
+    /* Exact line height from layout */
+    letter-spacing: 0.3px;
+    /* 1.5% mapping */
+    color: rgba(35, 31, 32, 0.8);
+}
+
+.product-watermark {
+    position: absolute;
+    top: 352px;
+    left: 328px;
+    /* Anchor left exactly aligning flush with info boundaries */
+    width: 778px;
+    text-align: left;
+    /* Shift from center */
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 120px;
+    line-height: 150px;
+    letter-spacing: -13px;
+    text-transform: uppercase;
+    color: rgba(35, 31, 32, 0.3);
+    /* Hex #231F20 at 30% per Figma property */
+    z-index: 2;
+    /* Sits below info but above image */
+}
+
+.slider-control {
+    position: absolute;
+    top: 449px;
+    /* Anchor layout perfectly aligned to arrow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    z-index: 10;
+}
+
+.slider-control.prev {
+    left: 128px;
+    /* Fixed symmetrical placement from 1440 bounds */
+}
+
+.slider-control.next {
+    left: 1268px;
+}
+
+.slider-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    /* Perfect circle radius 22px */
+    background: #27E3FF;
+    /* Cyan */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    /* White arrow */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lexend Giga', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.slider-arrow:hover {
+    transform: scale(1.1);
+}
+
+.slider-label {
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    color: rgba(35, 31, 32, 0.6);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.product-divider {
+    position: absolute;
+    top: 502px;
+    /* Bottom bounding of exactly 150px font height matching 352 top mark */
+    left: 209px;
+    /* Aligns squarely with the Powering header */
+    width: 1022px;
+    /* Spans to Right 209px explicitly */
+    height: 1px;
+    background-color: rgba(35, 31, 32, 0.2);
+    z-index: 2;
+}
+
+.product-info-left {
+    position: absolute;
+    top: 540px;
+    /* Explicit gap spacing offset below divider */
+    left: 328px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-desc {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    /* Interpreted based on scale logic against 21px btn */
+    line-height: 34px;
+    color: rgba(35, 31, 32, 0.6);
+}
+
+.product-cta {
+    width: 187px;
+    height: 50px;
+    border: 1px solid #27E3FF;
+    /* 1px Cyan bounding */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    /* Equivalent bounds mapped to earlier CTA specs */
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: #231F20;
+    /* Dark text rendering */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.product-image-container {
+    position: absolute;
+    top: 380px;
+    /* Aligns more naturally with the base of the BARYTES watermark */
+    right: 150px;
+    width: 580px;
+    /* Reduced from 700px to match Figma scale better */
+    height: 380px;
+    z-index: 1;
+    /* Keep behind text */
+}
+
+/* Extracted Theme Property support for global navigation vertical line */
+.theme-light .indicator-line {
+    /* background-color: rgba(35, 31, 32, 0.3); */
+    /* Darkens the tracking line for visibility */
+    background-color: #231F20;
+    opacity: 0.3;
+}
+
+.theme-light .indicator-content {
+    /* color: rgba(35, 31, 32, 0.8); */
+    /* Ensures 05 indicator text is extremely sharp */
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -1px;
+    color: #231F20;
+    opacity: 0.8;
+}
+
+/* Force high visibility for darkened sections */
+.footprint .indicator-text,
+.footprint .indicator-num {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* --- Section 6: Our Footprint --- */
+.footprint {
+    position: relative;
+    width: 100%;
+    height: 618px;
+    /* Fixed design height */
+    background: #1D1D1D;
+    display: flex;
+    overflow: hidden;
+}
+
+.footprint-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 80px 210px;
+    /* Moved padding to inner content so indicator is absolute to block */
+    z-index: 2;
+}
+
+.footprint-left {
+    flex: 0 0 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footprint-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.footprint-subtitle {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.footprint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footprint-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.footprint-num {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    color: #27E3FF;
+    min-width: 30px;
+}
+
+.footprint-label {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    /* Default inactive */
+    line-height: 100%;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.footprint-item.active .footprint-label {
+    font-size: 24px;
+    /* Selected scale */
+    font-weight: 600;
+    color: #27E3FF;
+}
+
+/* --- Map Positioning --- */
+.footprint-map-container {
+    flex: 1;
+    position: relative;
+    height: 100%;
+}
+
+.map-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 682px;
+    /* Exact Figma Map width */
+    height: 682px;
+    /* Exact Figma Map height */
+}
+
+.map-pin {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.pin-dot {
+    width: 8px;
+    height: 8px;
+    background: #27E3FF;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 1px solid #FFFFFF;
+}
+
+.pin-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: rgba(39, 227, 255, 0.4);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.pin-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
+    color: #231F20;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* --- Section 7: Sectors --- */
+.sectors {
+    position: relative;
+    width: 100%;
+    height: 586px;
+    /* Adjusted to Figma Hug frame */
+    background: #2E2E2E;
+    display: flex;
+    overflow: hidden;
+}
+
+.sectors-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 74px 0 51px 209px;
+    z-index: 2;
+}
+
+.sectors-left {
+    flex: 0 0 377px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectors-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 300;
+    /* Light weight from Figma */
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.sectors-subtitle {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    letter-spacing: 1.5%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 309px;
+}
+
+.sectors-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    color: #27E3FF;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.sectors-cta:hover {
+    opacity: 0.8;
+}
+
+/* --- Slider --- */
+.sectors-slider-container {
+    flex: 1;
+    position: relative;
+    padding-left: 40px;
+    /* Aligned to Figma gallery gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectors-slider {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    width: max-content;
+}
+
+.sector-card {
+    flex: 0 0 320px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.card-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    z-index: 2;
+}
+
+.card-title {
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.card-line {
+    width: 80%;
+    height: 3px;
+    background: #27E3FF;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: -40px;
+    /* Moved back into visible area (section is 586px high, previously it was -40px which was hidden) */
+    left: 550px;
+    /* (40px pad + 320px card1 + 30px gap + 160px card2_mid) = 550px from container start */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 5;
+}
+
+.nav-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #27E3FF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- Section 8: Trust Partners --- */
+.trust-section {
+    width: 100%;
+    min-height: 350px;
+    background-color: #E6E6E6;
+    display: flex;
+    align-items: center;
+    padding: 60px 80px 60px 106px;
+    z-index: 2;
+}
+
+.trust-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.trust-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #231F20;
+    text-align: center;
+}
+
+.logo-grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+}
+
+.logo-placeholder {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #231F20;
+    opacity: 0.6;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* --- Section 9: Impact --- */
+.impact {
+    position: relative;
+    width: 100%;
+    min-height: 536px;
+    /* Allow it to grow if needed */
+    background-color: #2E2E2E;
+    display: flex;
+    overflow: hidden;
+}
+
+.impact-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 60px 100px 60px 210px;
+    /* Reduced vertical padding from 80px to 60px to fit 410px content in 536px section */
+    align-items: center;
+    gap: 100px;
+}
+
+.impact-left {
+    flex: 0 0 549px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.impact-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+.impact-subtitle {
+    font-family: 'Blinker', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* Figma spec */
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 458px;
+}
+
+.impact-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: #27E3FF;
+    cursor: pointer;
+}
+
+.impact-right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.impact-image-wrapper {
+    width: 502px;
+    height: 410px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.impact-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #231F20;
+}
+
+.impact-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    /* Figma spec */
+    height: 44px;
+    /* Figma spec */
+    border-radius: 50%;
+    background-color: #27E3FF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.impact-nav.prev {
+    left: 40px;
+}
+
+.impact-nav.next {
+    right: 40px;
+}
+
+/* --- Section 10: Contact --- */
+.contact {
+    position: relative;
+    /* Fixed: Added to allow absolute positioning of the indicator */
+    width: 100%;
+    min-height: 345px;
+    background-color: #555353;
+    display: flex;
+    align-items: center;
+    padding: 80px 100px 80px 210px;
+    /* Aligned to Figma spec L: 210, R: 100 */
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.contact-title {
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -3px;
+    color: #FFFFFF;
+}
+
+.contact-btn {
+    width: 204px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #00C0F3;
+    color: #FFFFFF;
+    font-family: 'Lexend Giga', sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    /* Figma spec */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #00C0F3;
+    color: #FFFFFF;
+    /* Inverted for brand consistency */
+}
+
+/* --- Section 11: Global Footer --- */
+.footer {
+    width: 100%;
+    background-color: #010101;
+    color: #FFFFFF;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 40px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 0;
+}
+
+.footer-about {
+    flex: 0 0 336px;
+    /* Removed large margin-right to use the 439px gap logic */
+}
+
+.footer-nav-wrapper {
+    display: flex;
+    gap: 80px;
+    margin-left: auto;
+}
+
+.footer-nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.footer-nav-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-group.home-group {
+    margin-bottom: -15px;
+    /* Pull Explore closer to Home icon area */
+}
+
+.footer-logo {
+    width: 148px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.footer-desc {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.75px;
+    color: rgba(248, 250, 251, 0.8);
+    margin: 0;
+    max-width: 336px;
+}
+
+.footer-heading {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin: 0 0 16px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links.no-heading {
+    margin-top: 48px;
+    /* Alignment fix for columns without headings */
+}
+
+.footer-link {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #CFCFCF;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #00C0F3;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(248, 250, 251, 0.2);
+}
+
+.footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.copyright {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #CFCFCF;
+    white-space: nowrap;
+}
+
+.policy-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.policy-links li {
+    display: flex;
+    align-items: center;
+}
+
+.policy-links a {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #CFCFCF;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.policy-links a:hover {
+    color: #00C0F3;
+}
+
+.separator {
+    font-size: 13px;
+    color: rgba(207, 207, 207, 0.5);
+    margin: 0 8px;
+}
+
+.footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.legal-links {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #CFCFCF;
+    white-space: nowrap;
+}
+
+.legal-links .dot {
+    margin: 0 6px;
+    opacity: 0.5;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-links a {
+    color: #FFFFFF;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #00C0F3;
+    opacity: 0.8;
+}
+
+.social-links svg {
+    fill: currentColor;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* ============================
+   TABLET (max-width: 1024px)
+   ============================ */
+@media (max-width: 1024px) {
+
+    /* --- Section Indicator --- */
+    .section-indicator {
+        left: 20px;
+        width: 60px;
+    }
+
+    /* --- Header --- */
+    .header {
+        padding: 0 30px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        padding: 180px 60px 100px 80px;
+        height: auto;
+        min-height: 550px;
+    }
+
+    .hero-title {
+        font-size: 46px;
+        line-height: 56px;
+        letter-spacing: 1px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    /* --- About Us --- */
+    .about-us {
+        padding: 80px 40px 80px 100px;
+        height: auto;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+    /* --- Capacity --- */
+    .capacity {
+        padding: 80px 60px;
+        height: auto;
+    }
+
+    .stat-row {
+        grid-template-columns: repeat(3, 1fr);
+        height: auto;
+        padding: 30px 30px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-text {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    /* --- Value Chain --- */
+    .value-chain-header {
+        height: auto;
+        padding: 50px 30px 0 30px;
+    }
+
+    .vc-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .vc-subtitle {
+        font-size: 17px;
+    }
+
+    .vc-tabs {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .vc-tab {
+        font-size: 11px;
+        padding: 0 14px;
+        height: 40px;
+    }
+
+    .vc-tab.active {
+        font-size: 16px;
+        letter-spacing: -1px;
+    }
+
+    .tab-content {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .tab-cta {
+        position: relative;
+        bottom: auto;
+        margin-top: 30px;
+    }
+
+    /* --- Products --- */
+    .products {
+        height: auto;
+        min-height: auto;
+        padding: 60px 0 60px 0;
+    }
+
+    .products-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .products-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 0 60px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .products-subtitle {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 20px 60px 0;
+        font-size: 17px;
+    }
+
+    .product-watermark {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 20px 60px 0;
+        font-size: 70px;
+        line-height: 80px;
+        letter-spacing: -6px;
+        width: 100%;
+    }
+
+    .product-divider {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 120px);
+        margin: 20px 60px;
+    }
+
+    .product-info-left {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0 60px;
+    }
+
+    .product-image-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+        margin: 30px auto 0;
+    }
+
+    .slider-control {
+        position: relative;
+        top: auto;
+        left: auto !important;
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .slider-control.prev,
+    .slider-control.next {
+        left: auto;
+    }
+
+    .product-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-display {
+        width: 100%;
+    }
+
+    /* --- Footprint --- */
+    .footprint {
+        height: auto;
+    }
+
+    .footprint-content {
+        padding: 60px 40px 60px 80px;
+        flex-direction: column;
+    }
+
+    .footprint-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .footprint-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .footprint-map-container {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .map-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: 500px;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    /* --- Sectors --- */
+    .sectors {
+        height: auto;
+    }
+
+    .sectors-content {
+        padding: 60px 0 60px 80px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sectors-left {
+        flex: none;
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    .sectors-slider-container {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .slider-nav {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    /* --- Trust --- */
+    .trust-section {
+        padding: 60px 40px;
+    }
+
+    .trust-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* --- Impact --- */
+    .impact {
+        min-height: auto;
+    }
+
+    .impact-content {
+        padding: 60px 40px 60px 80px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .impact-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .impact-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .impact-image-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+    }
+
+    .impact-nav.prev {
+        left: 15px;
+    }
+
+    .impact-nav.next {
+        right: 15px;
+    }
+
+    /* --- Contact --- */
+    .contact {
+        padding: 60px 40px;
+        min-height: auto;
+    }
+
+    .contact-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* --- Footer --- */
+    .footer-about {
+        flex: none;
+        width: auto;
+    }
+
+    .footer-nav-wrapper {
+        margin-left: auto;
+        gap: 60px;
+    }
+
+    .footer-bottom-left {
+        gap: 20px;
+    }
+
+    .policy-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================
+   MOBILE (max-width: 768px)
+   ============================ */
+@media (max-width: 768px) {
+
+    /* --- Section Indicator --- */
+    .section-indicator {
+        display: none;
+    }
+
+    /* --- Header --- */
+    .header {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo-img {
+        width: 110px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        padding: 110px 20px 50px 20px;
+        height: auto;
+        min-height: auto;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: 0.5px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .hero-divider {
+        max-width: 280px;
+        margin: 0 auto 24px;
+    }
+
+    .cta-btn {
+        width: auto;
+        font-size: 17px;
+    }
+
+    /* --- About Us --- */
+    .about-us {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+        margin-bottom: 24px;
+    }
+
+    .about-body {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .about-footer {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    /* --- Capacity --- */
+    .capacity {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .capacity-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .stats-container {
+        gap: 16px;
+    }
+
+    .stat-row {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        padding: 24px 20px;
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    /* --- Value Chain --- */
+    .value-chain-header {
+        height: auto;
+        padding: 40px 20px 0 20px;
+    }
+
+    .vc-title {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1px;
+    }
+
+    .vc-subtitle {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .vc-tabs {
+        width: 100%;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 4px;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .vc-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .vc-tab {
+        flex: 0 0 auto;
+        font-size: 11px;
+        padding: 0 12px;
+        height: 36px;
+        white-space: nowrap;
+    }
+
+    .vc-tab.active {
+        font-size: 14px;
+        letter-spacing: -1px;
+        height: 40px;
+    }
+
+    .tab-content {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .tab-inner {
+        padding: 20px;
+    }
+
+    .tab-description {
+        font-size: 15px;
+        line-height: 22px;
+        max-width: 100%;
+    }
+
+    .tab-cta {
+        position: relative;
+        bottom: auto;
+        margin: 24px auto 0;
+        font-size: 16px;
+        width: 160px;
+        height: 44px;
+    }
+
+    /* --- Products --- */
+    .products {
+        height: auto;
+        min-height: auto;
+        padding: 50px 0;
+        overflow: visible;
+    }
+
+    .products-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .products-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .products-subtitle {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        padding: 16px 20px 0;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .product-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-watermark {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 16px 20px 0;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -4px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-divider {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 40px);
+        margin: 16px 20px;
+    }
+
+    .product-info-left {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 0 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .product-desc {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .product-cta {
+        margin: 0 auto;
+        font-size: 17px;
+        width: 160px;
+        height: 44px;
+    }
+
+    .product-image-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 80%;
+        max-width: 350px;
+        height: 250px;
+        margin: 20px auto 0;
+    }
+
+    .product-display {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slider-control {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .slider-control.prev,
+    .slider-control.next {
+        left: auto;
+    }
+
+    /* --- Footprint --- */
+    .footprint {
+        height: auto;
+    }
+
+    .footprint-content {
+        padding: 50px 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footprint-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .footprint-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .footprint-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .footprint-num {
+        font-size: 30px;
+    }
+
+    .footprint-map-container {
+        width: 100%;
+        min-height: 280px;
+    }
+
+    .map-wrapper {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: 280px;
+        margin: 0 auto;
+    }
+
+    .pin-label {
+        font-size: 11px;
+        padding: 2px 8px;
+    }
+
+    /* --- Sectors --- */
+    .sectors {
+        height: auto;
+    }
+
+    .sectors-content {
+        padding: 50px 20px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .sectors-left {
+        flex: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .sectors-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .sectors-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+    }
+
+    .sectors-cta {
+        font-size: 17px;
+    }
+
+    .sectors-slider-container {
+        padding-left: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sector-card {
+        flex: 0 0 260px;
+        height: 320px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .slider-nav {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* --- Trust Section --- */
+    .trust-section {
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
+    .trust-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .trust-content {
+        gap: 30px;
+    }
+
+    .logo-grid {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .logo-item {
+        min-width: 90px;
+    }
+
+    /* --- Impact --- */
+    .impact {
+        min-height: auto;
+    }
+
+    .impact-content {
+        padding: 50px 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .impact-left {
+        flex: none;
+        width: 100%;
+    }
+
+    .impact-title {
+        font-size: 26px;
+        line-height: 34px;
+        letter-spacing: -1px;
+    }
+
+    .impact-subtitle {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%;
+    }
+
+    .impact-cta {
+        font-size: 17px;
+    }
+
+    .impact-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .impact-image-wrapper {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/10;
+    }
+
+    .impact-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .impact-nav.prev {
+        left: 10px;
+    }
+
+    .impact-nav.next {
+        right: 10px;
+    }
+
+    /* --- Contact --- */
+    .contact {
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
+    .contact-title {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -1px;
+    }
+
+    .contact-btn {
+        width: 180px;
+        height: 44px;
+        font-size: 17px;
+    }
+
+    /* --- Footer --- */
+    .footer-container {
+        padding: 40px 20px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-about {
+        flex: none;
+        width: 100%;
+    }
+
+    .footer-desc {
+        max-width: 100%;
+    }
+
+    .footer-nav-wrapper {
+        margin-left: 0;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 30px;
+    }
+
+    .footer-bottom-left {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .policy-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .policy-links .separator {
+        display: none;
+    }
+
+    .footer-bottom-right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ============================
+   SMALL MOBILE (max-width: 480px)
+   ============================ */
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .about-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .capacity-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .stat-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 26px;
+    }
+
+    .stat-item {
+        align-items: center;
+        text-align: center;
+    }
+
+    .vc-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .product-watermark {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -3px;
+    }
+
+    .products-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .footprint-title,
+    .sectors-title,
+    .impact-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .contact-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .sector-card {
+        flex: 0 0 220px;
+        height: 280px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+}
