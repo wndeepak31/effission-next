@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'RBL - Together for transformation',
-  description: 'Building modern and resilient digital experiences.',
+  title: 'Effission - Digital Brilliance for Jewelry',
+  description: 'Leading software provider in the jewelry domain, specializing in Web Development, AI-driven Automation, 3D Configuration, and Digital Catalogues.',
 }
 
 export default function RootLayout({ children }) {

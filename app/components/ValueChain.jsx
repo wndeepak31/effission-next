@@ -5,38 +5,38 @@ import Image from 'next/image';
 import SectionIndicator from './SectionIndicator';
 
 const tabContentData = {
-  'MINING': {
-    image: '/images/bg_mining1.jpg',
-    description: <>Captive mining strength anchored in rich, multi-mineral reserves<br />ensures assured quality from the very source.</>
+  'DISCOVERY': {
+    image: '/images/bg_hero.png',
+    description: <>Understanding your jewelry brand's unique needs and digital goals to create a strategic roadmap.</>
   },
-  'PROCESSING': {
-    image: '/images/bg_processing.jpg',
-    description: <>Captive processing strength anchored in rich, multi-mineral reserves<br />ensures assured quality from the very source.</>
+  'DESIGN': {
+    image: '/images/bg_section2.png',
+    description: <>Crafting intuitive and luxurious user experiences tailored specifically for the jewelry industry.</>
   },
-  'MANUFACTURING': {
-    image: '/images/bg_manufacturing.jpg',
-    description: <>Captive manufacturing strength anchored in rich, multi-mineral reserves<br />ensures assured quality from the very source.</>
+  'DEVELOPMENT': {
+    image: '/images/bg_section3.png',
+    description: <>Building robust, scalable, and high-performance software solutions with the latest technologies.</>
   },
-  'DELIVERING': {
-    image: '/images/bg_delivering.jpg',
-    description: <>Captive delivering strength anchored in rich, multi-mineral reserves<br />ensures assured quality from the very source.</>
+  'DEPLOYMENT': {
+    image: '/images/bg_hero.png',
+    description: <>Seamlessly launching your digital products and providing ongoing support for your evolution.</>
   }
 };
 
 export default function ValueChain() {
-  const [activeTab, setActiveTab] = useState('MINING');
+  const [activeTab, setActiveTab] = useState('DISCOVERY');
 
   const content = tabContentData[activeTab];
 
   return (
     <section className="section value-chain">
-      <SectionIndicator number="04" label="What we do" isFirst={false} />
+      <SectionIndicator number="04" label="Our Process" isFirst={false} />
 
       <div className="value-chain-header">
-        <h2 className="vc-title">The entire mineral value chain.<br />One company.</h2>
+        <h2 className="vc-title">The Digital Jewelry Lifecycle.<br />One Partner.</h2>
         <p className="vc-subtitle">
-          Complete control over quality. Unwavering consistency. Supply you can count on today,<br />
-          tomorrow, always.
+          Complete control over innovation. Unwavering quality. Technology you can count on today,<br />
+          tomorrow, and beyond.
         </p>
 
         <div className="vc-tabs">

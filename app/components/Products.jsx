@@ -6,19 +6,24 @@ import SectionIndicator from './SectionIndicator';
 
 const products = [
   {
-    name: 'BARYTES',
-    description: 'high-density\nmineral',
-    image: '/images/barite-specimen 1.png',
+    name: 'WEB DEVELOPMENT',
+    description: 'bespoke\ne-commerce',
+    image: '/images/effission-logo.png',
   },
   {
-    name: 'BENTONITE',
-    description: 'absorbent\nmineral',
-    image: '/images/barite-specimen 1.png',
+    name: 'AUTOMATION & AI',
+    description: 'intelligent\noperations',
+    image: '/images/effission-logo.png',
   },
   {
-    name: 'CALCIUM',
-    description: 'high-purity\nmineral',
-    image: '/images/barite-specimen 1.png',
+    name: '3D CONFIGURATION',
+    description: 'interactive\nviewers',
+    image: '/images/effission-logo.png',
+  },
+  {
+    name: 'DIGITAL CATALOGUE',
+    description: 'dynamic\nshowcases',
+    image: '/images/effission-logo.png',
   }
 ];
 
@@ -35,12 +40,12 @@ export default function Products() {
 
   return (
     <section className="section products">
-      <SectionIndicator number="05" label="Our products" isFirst={false} theme="light" />
+      <SectionIndicator number="05" label="Our Services" isFirst={false} theme="light" />
 
       <div className="products-content">
-        <h2 className="products-title">Powering performance.<br />At scale.</h2>
+        <h2 className="products-title">Digital Excellence.<br />Tailored for Jewelry.</h2>
         <p className="products-subtitle">
-          Solutions customised for the demands of modern industry: consistent, reliable, built to perform
+          Cutting-edge solutions designed for the specific needs of the jewelry industry.
         </p>
 
         <div className="product-slider">

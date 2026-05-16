@@ -8,9 +8,9 @@ const Impact = () => {
 
   const slides = [
     {
-      title: 'A brighter future for everyone',
-      subtitle: 'Empowering communities through structured interventions in health, education, nutrition, environmental sustainability and social welfare.',
-      image: '/images/impact.png'
+      title: 'Empowering the Jewelry Industry',
+      subtitle: 'Driving digital growth and innovation for jewelry brands through state-of-the-art software solutions and AI-driven automation.',
+      image: '/images/effission-logo.png'
     },
     // More slides can be added here
   ];

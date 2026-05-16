@@ -1,34 +1,38 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src="/images/logo.svg" alt="RBL Logo" className="logo-img" />
+        <img src="/images/effission-logo.png" alt="Effission Logo" className="logo-img" />
       </div>
 
       <nav className={`nav ${isMenuOpen ? 'mobile-active' : ''}`}>
         <ul className="nav-links">
-          <li><a href="#" className="active" onClick={() => setIsMenuOpen(false)}>ABOUT US</a></li>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>OUR PRODUCTS</a></li>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>OUR PRESENCE</a></li>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>INNOVATION <span className="arrow-down"></span></a></li>
-          <li><a href="#" onClick={() => setIsMenuOpen(false)}>IMPACT</a></li>
+          <li><a href="#about" className="active">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#products">3D Configurator</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <div className="header-actions">
-        <button className="search-btn" aria-label="Search">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z"
-              fill="#F8FAFB" />
-          </svg>
-        </button>
+        <a href="#contact" className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>
+          Request Demo
+        </a>
         <button
           className={`menu-btn ${isMenuOpen ? 'active' : ''}`}
           aria-label="Menu"

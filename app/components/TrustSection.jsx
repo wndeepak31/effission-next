@@ -1,38 +1,24 @@
-import React from 'react';
-import Image from 'next/image';
+'use client';
 
-const TrustSection = () => {
-  const logos = [
-    { name: 'asianpaints', label: 'asianpaints' },
-    { name: 'Berger-paints', label: 'Berger' },
-    { name: 'AkzoNobel-logo', label: 'AkzoNobel' },
-    { name: 'KANSAI NEROLAC', label: 'KANSAI NEROLAC' },
-    { name: 'Colgate-Palmolive', label: 'Colgate-Palmolive' },
-    { name: 'Unilever', label: 'Unilever' },
-    { name: 'ITC', label: 'ITC' },
-  ];
+export default function TrustSection() {
+  const partners = ["LUXE", "BRILLIANCE", "AURELIUS", "GILDED", "PRECISION"];
 
   return (
-    <section className="trust-section">
-      <div className="trust-content">
-        <h2 className="trust-title">Trusted by those who build India</h2>
-
-        <div className="logo-grid">
-          {logos.map((logo, index) => (
-            <div key={index} className="logo-item">
-              <Image
-                src={`/images/${logo.name}.png`}
-                alt={logo.label}
-                width={150}
-                height={60}
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
+    <section className="section" style={{ backgroundColor: 'var(--bg-primary)', borderTop: '1px solid var(--glass-border)' }}>
+      <div className="container">
+        <div className="section-header" style={{ marginBottom: '40px' }}>
+          <span className="section-label">Global Trust</span>
+          <h2 style={{ fontSize: '20px', color: 'var(--text-secondary)' }}>Powering the world's most prestigious jewelry houses</h2>
+        </div>
+        
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', opacity: 0.5, flexWrap: 'wrap', gap: '40px' }}>
+          {partners.map((partner, index) => (
+            <span key={index} style={{ fontSize: '24px', fontWeight: '700', letterSpacing: '0.2em', fontFamily: 'Outfit' }}>
+              {partner}
+            </span>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default TrustSection;
+}

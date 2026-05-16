@@ -20,31 +20,31 @@ export default function Capacity() {
         <div className="stats-container">
           <div className="stat-row">
             <div className="stat-item">
-              <div className="stat-number">40 +</div>
-              <div className="stat-text">years of delivering<br />solutions</div>
+              <div className="stat-number">100 +</div>
+              <div className="stat-text">Clients<br />Worldwide</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">12</div>
-              <div className="stat-text">manufacturing<br />units</div>
+              <div className="stat-number">500 +</div>
+              <div className="stat-text">Projects<br />Delivered</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">Pan-India</div>
-              <div className="stat-text">manufacturing<br />footprints</div>
+              <div className="stat-number">15 +</div>
+              <div className="stat-text">Countries<br />Served</div>
             </div>
           </div>
 
           <div className="stat-row">
             <div className="stat-item">
-              <div className="stat-number">50,000 +</div>
-              <div className="stat-text">MT monthly processing<br />capacity</div>
+              <div className="stat-number">50 +</div>
+              <div className="stat-text">Expert<br />Developers</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">9</div>
-              <div className="stat-text">captive mines</div>
+              <div className="stat-number">99 %</div>
+              <div className="stat-text">Client<br />Satisfaction</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">Global</div>
-              <div className="stat-text">exports</div>
+              <div className="stat-number">24 / 7</div>
+              <div className="stat-text">Technical<br />Support</div>
             </div>
           </div>
         </div>

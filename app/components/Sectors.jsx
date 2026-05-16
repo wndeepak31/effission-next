@@ -8,11 +8,11 @@ const Sectors = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const sectorData = [
-    { id: 1, title: 'Oil & Gas', image: '/images/oil_gas.png' },
-    { id: 2, title: 'Rubber', image: '/images/rubber.png' },
-    { id: 3, title: 'Ceramics & Tiles', image: '/images/ceramics.png' },
-    { id: 4, title: 'Manufacturing', image: '/images/manufacturing.png' },
-    { id: 5, title: 'Construction', image: '/images/construction.png' },
+    { id: 1, title: 'Web Development', image: '/images/effission-logo.png' },
+    { id: 2, title: '3D Configurator', image: '/images/effission-logo.png' },
+    { id: 3, title: 'AI Automation', image: '/images/effission-logo.png' },
+    { id: 4, title: 'Digital Catalogue', image: '/images/effission-logo.png' },
+    { id: 5, title: 'Inventory Management', image: '/images/effission-logo.png' },
   ];
 
   const nextSlide = () => {
@@ -27,16 +27,16 @@ const Sectors = () => {
     <section className="sectors">
       <SectionIndicator
         number="07"
-        label="Sectors"
+        label="Jewelry Solutions"
       />
 
       <div className="sectors-content">
         <div className="sectors-left">
           <h2 className="sectors-title">
-            Every critical<br /> sector. Covered.
+            Comprehensive<br /> jewelry solutions.
           </h2>
           <p className="sectors-subtitle">
-            The industries that build nations run on materials they can trust. They run on RBL.
+            Empowering jewelry retailers and manufacturers with state-of-the-art software.
           </p>
 
           <div className="sectors-cta">

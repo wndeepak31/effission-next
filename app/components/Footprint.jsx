@@ -1,96 +1,128 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
-import SectionIndicator from './SectionIndicator';
 
-const Footerprint = () => {
-  const [activeCategory, setActiveCategory] = useState('plants');
+const Footprint = () => {
+  const [activeCategory, setActiveCategory] = useState('brands');
 
   const categories = [
-    { id: 'plants', label: 'Processing Plants', count: 9 },
-    { id: 'mining', label: 'Mining Locations', count: 6 },
-    { id: 'warehouses', label: 'Warehouses', count: 2 },
+    { 
+      id: 'brands', 
+      label: 'Jewelry Brands', 
+      count: '150+', 
+      growth: '+12% this year',
+      description: 'Prestigious jewelry houses trusting our digital solutions.'
+    },
+    { 
+      id: 'markets', 
+      label: 'Global Markets', 
+      count: '24+', 
+      growth: 'Expanding to Asia',
+      description: 'Delivering digital excellence across diverse international borders.'
+    },
+    { 
+      id: 'renders', 
+      label: '3D Renders / Mo', 
+      count: '1.2M+', 
+      growth: 'High-speed delivery',
+      description: 'State-of-the-art cloud nodes powering real-time configuration.'
+    },
   ];
 
   const pins = {
-    plants: [
-      { name: 'Udaipur', top: '45%', left: '50%' },
-      { name: 'Lokapur', top: '50%', left: '58%' },
-      { name: 'Bhuj', top: '58%', left: '54%' },
-      { name: 'Vizag', top: '56%', left: '63%' },
-      { name: 'Parbatsar', top: '50%', left: '17%' },
-      { name: 'Ambaji', top: '54%', left: '50%' },
-      { name: 'Satara', top: '61%', left: '52%' },
-      { name: 'Kalo', top: '65%', left: '57%' },
-      { name: 'Quy', top: '65%', left: '75%' },
+    brands: [
+      { name: 'New York Hub', top: '40%', left: '25%' },
+      { name: 'London Studio', top: '35%', left: '48%' },
+      { name: 'Mumbai H.Q.', top: '58%', left: '68%' },
+      { name: 'Singapore Node', top: '65%', left: '82%' },
+      { name: 'Dubai Office', top: '48%', left: '58%' },
     ],
-    mining: [
-      { name: 'Rajasthan Main', top: '48%', left: '48%' },
-      { name: 'Bhilwara', top: '52%', left: '50%' },
-      { name: 'Alwar', top: '46%', left: '52%' },
-      { name: 'Nagaur', top: '50%', left: '54%' },
-      { name: 'Jodhpur', top: '55%', left: '49%' },
-      { name: 'Udaipur Site', top: '58%', left: '51%' },
+    markets: [
+      { name: 'USA', top: '40%', left: '20%' },
+      { name: 'Europe', top: '38%', left: '50%' },
+      { name: 'Middle East', top: '48%', left: '55%' },
+      { name: 'India', top: '55%', left: '68%' },
+      { name: 'SE Asia', top: '65%', left: '80%' },
     ],
-    warehouses: [
-      { name: 'Kolkata Hub', top: '55%', left: '72%' },
-      { name: 'Mumbai Port', top: '60%', left: '45%' },
+    renders: [
+      { name: 'Cloud Node Alpha', top: '42%', left: '22%' },
+      { name: 'Cloud Node Beta', top: '35%', left: '52%' },
+      { name: 'Cloud Node Gamma', top: '55%', left: '75%' },
     ]
   };
 
   return (
-    <section className="footprint">
-      <SectionIndicator
-        number="06"
-        label="Our footprint"
-      />
+    <section id="footprint" className="section" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Localized glow for the footprint section */}
+      <div style={{ 
+        position: 'absolute', 
+        top: '50%', 
+        left: '50%', 
+        transform: 'translate(-50%, -50%)',
+        width: '800px', 
+        height: '800px', 
+        background: 'radial-gradient(circle, rgba(0, 192, 243, 0.05) 0%, transparent 70%)',
+        zIndex: 0,
+        pointerEvents: 'none'
+      }}></div>
 
-      <div className="footprint-content">
-        <div className="footprint-left">
-          <h2 className="footprint-title">
-            From mine to market. Everywhere it matters.
-          </h2>
-          <p className="footprint-subtitle">
-            An ever-expanding footprint. A commitment that doesn't<br /> stop at borders.
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="section-header">
+          <span className="section-label">Global Connectivity</span>
+          <h2 className="section-title">Our Digital Presence</h2>
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+            A worldwide network of innovation hubs and cloud infrastructure 
+            dedicated to the jewelry industry.
           </p>
+        </div>
 
-          <div className="footprint-list">
+        <div className="footprint-container">
+          <div className="footprint-stats">
             {categories.map((cat) => (
               <div
                 key={cat.id}
-                className={`footprint-item ${activeCategory === cat.id ? 'active' : ''}`}
+                className={`stat-card ${activeCategory === cat.id ? 'active' : ''}`}
                 onClick={() => setActiveCategory(cat.id)}
               >
-                <span className="footprint-num">{cat.count}</span>
-                <span className="footprint-label">{cat.label}</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div>
+                    <h4>{cat.count}</h4>
+                    <p>{cat.label}</p>
+                  </div>
+                  <span style={{ fontSize: '10px', color: 'var(--accent-primary)', opacity: 0.8, fontWeight: 'bold' }}>
+                    {cat.growth}
+                  </span>
+                </div>
+                {activeCategory === cat.id && (
+                  <p style={{ marginTop: '12px', fontSize: '12px', color: 'var(--text-secondary)', textTransform: 'none', letterSpacing: 'normal', opacity: 1 }}>
+                    {cat.description}
+                  </p>
+                )}
               </div>
             ))}
           </div>
-        </div>
 
-        <div className="footprint-map-container">
-          <div className="map-wrapper">
-            <Image
+          <div className="map-container">
+            <img
               src="/images/world_map_dots.png"
               alt="World Map"
-              fill
-              style={{ objectFit: 'contain', opacity: 0.8 }}
+              className="map-img"
             />
 
             {pins[activeCategory].map((pin, i) => (
               <div
                 key={i}
                 className="map-pin"
-                style={{ top: pin.top, left: pin.left }}
+                style={{ 
+                  top: pin.top, 
+                  left: pin.left,
+                  opacity: 1,
+                  visibility: 'visible'
+                }}
               >
                 <div className="pin-pulse"></div>
                 <div className="pin-dot"></div>
-                {pin.name && (
-                  <div className="pin-label">
-                    {pin.name}
-                  </div>
-                )}
+                <div className="pin-label">{pin.name}</div>
               </div>
             ))}
           </div>
@@ -100,4 +132,4 @@ const Footerprint = () => {
   );
 };
 
-export default Footerprint;
+export default Footprint;
