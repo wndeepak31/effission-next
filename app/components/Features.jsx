@@ -5,19 +5,17 @@ const Features = () => {
     <section id="features" className="section">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Innovation Stack</span>
-          <h2 className="section-title">The Technology Behind the Sparkle</h2>
+          <span className="section-label">Proprietary Technology</span>
+          <h2 className="section-title">The Future of Luxury Retail</h2>
         </div>
 
-        <div className="bento-grid" style={{ gridAutoRows: '250px' }}>
+        <div className="bento-grid" style={{ gridAutoRows: '220px' }}>
           <div className="premium-card large" style={{ gridColumn: 'span 2', gridRow: 'span 2' }}>
             <img src="/images/feat_cloud_node.png" className="premium-card-img" alt="Cloud Nodes" style={{ objectFit: 'cover' }} />
             <div className="premium-card-content">
-              <span className="section-label" style={{ color: '#fff' }}>Performance</span>
-              <h3 style={{ fontSize: '32px', marginBottom: '16px' }}>Real-Time Cloud Rendering</h3>
+              <h3 style={{ fontSize: '36px', marginBottom: '16px' }}>Holographic Rendering</h3>
               <p style={{ color: 'var(--text-secondary)', maxWidth: '400px' }}>
-                Our proprietary rendering nodes deliver physically accurate light 
-                simulations directly to any browser, capturing the true "fire" of a diamond.
+                Studio-grade light simulation delivering 99.9% visual accuracy across all global devices instantly.
               </p>
             </div>
           </div>
@@ -25,27 +23,24 @@ const Features = () => {
           <div className="premium-card tall" style={{ gridRow: 'span 2' }}>
             <img src="/images/feat_ai_dash.png" className="premium-card-img" alt="AI Analytics" style={{ objectFit: 'cover' }} />
             <div className="premium-card-content">
-              <span className="section-label" style={{ color: '#fff' }}>Intelligence</span>
-              <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>AI Inventory Forecasting</h3>
+              <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Intelligent Atelier</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
-                Intelligent stock management that predicts trends and optimizes procurement.
+                AI-driven inventory curation that adapts to regional luxury trends in real-time.
               </p>
             </div>
           </div>
 
           <div className="premium-card">
-            <div className="premium-card-content" style={{ background: 'var(--bg-secondary)', justifyContent: 'center', textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>📦</div>
-              <h3>ERP Integration</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Seamlessly sync with SAP, Oracle, and Tally.</p>
+            <div className="premium-card-content" style={{ background: 'var(--bg-secondary)', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
+              <h4 style={{ color: 'var(--accent-primary)', marginBottom: '8px' }}>API Unified</h4>
+              <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>Universal sync with SAP, Oracle & Salesforce.</p>
             </div>
           </div>
 
           <div className="premium-card">
-            <div className="premium-card-content" style={{ background: 'var(--bg-secondary)', justifyContent: 'center', textAlign: 'center' }}>
-              <div style={{ fontSize: '40px', marginBottom: '10px' }}>🔒</div>
-              <h3>Secure Vault</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Blockchain-backed asset tracking.</p>
+            <div className="premium-card-content" style={{ background: 'var(--bg-secondary)', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
+              <h4 style={{ color: 'var(--accent-primary)', marginBottom: '8px' }}>Zero Latency</h4>
+              <p style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>Global edge delivery for seamless 3D viewing.</p>
             </div>
           </div>
         </div>

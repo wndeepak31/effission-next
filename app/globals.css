@@ -3,19 +3,21 @@
   --bg-primary: #050505;
   --bg-secondary: #0c0c0c;
   --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-secondary: rgba(255, 255, 255, 0.6);
   --accent-primary: #00C0F3;
   --accent-secondary: #0070FF;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: 12px;
-
+  --accent-glow: rgba(0, 192, 243, 0.15);
+  
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+  
   /* Spacing */
-  --section-padding: 120px 0;
+  --section-padding: 40px 0;
   --container-max-width: 1400px;
-
+  
   /* Transitions */
-  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -235,12 +237,13 @@ ul {
 
 /* Section Common */
 .section {
-  padding: 100px 0;
+  padding: var(--section-padding);
+  position: relative;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .section-label {

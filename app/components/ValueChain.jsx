@@ -6,19 +6,19 @@ import SectionIndicator from './SectionIndicator';
 
 const tabContentData = {
   'DISCOVERY': {
-    image: '/images/bg_hero.png',
+    image: '/images/feat_ai_dash.png',
     description: <>Understanding your jewelry brand's unique needs and digital goals to create a strategic roadmap.</>
   },
   'DESIGN': {
-    image: '/images/bg_section2.png',
+    image: '/images/about_jewelry_tech.png',
     description: <>Crafting intuitive and luxurious user experiences tailored specifically for the jewelry industry.</>
   },
   'DEVELOPMENT': {
-    image: '/images/bg_section3.png',
+    image: '/images/jewelry_global_tech.png',
     description: <>Building robust, scalable, and high-performance software solutions with the latest technologies.</>
   },
   'DEPLOYMENT': {
-    image: '/images/bg_hero.png',
+    image: '/images/feat_cloud_node.png',
     description: <>Seamlessly launching your digital products and providing ongoing support for your evolution.</>
   }
 };
