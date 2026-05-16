@@ -26,8 +26,8 @@ export default function AboutUs() {
           </div>
           <div className="glass-effect" style={{ padding: '20px', borderRadius: '16px' }}>
             <img 
-              src="/images/bg_section2.png" 
-              alt="Luxury jewelry display" 
+              src="/images/about_jewelry_tech.png" 
+              alt="Digital Jewelry Design Workshop" 
               style={{ width: '100%', borderRadius: '12px', display: 'block' }}
             />
           </div>
