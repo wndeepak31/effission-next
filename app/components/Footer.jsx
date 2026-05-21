@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -26,7 +27,7 @@ const Footer = () => {
           <div>
             <h4 style={{ marginBottom: '24px', fontSize: '18px' }}>Company</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', listStyle: 'none', padding: 0 }}>
-              <li><a href="#about" style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>About Us</a></li>
+              <li><Link href="/about" style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>About Us</Link></li>
               <li><a href="#" style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Careers</a></li>
               <li><a href="#" style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Privacy Policy</a></li>
               <li><a href="#" style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Terms of Service</a></li>

@@ -1,35 +1,41 @@
 'use client';
+import Link from 'next/link';
 
 const services = [
   {
     title: "3D Jewelry Configuration",
     desc: "Empower your customers to customize their jewelry in real-time with physically accurate materials and stunning 3D renders.",
     icon: "💎",
-    image: "/images/effission_hero_jewelry_3d_1778945015422.png"
+    image: "/images/jewelry_3d_config_1779341346063.png",
+    link: "/services/3d-jewelry-configuration"
   },
   {
     title: "AI-Powered Automation",
     desc: "Streamline your workflows with intelligent AI tools designed for jewelry design, inventory management, and customer insights.",
     icon: "🤖",
-    image: "/images/jewelry_ai_automation_1778945033758.png"
+    image: "/images/ai_jewelry_automation_1779341365264.png",
+    link: "/services/ai-powered-automation"
   },
   {
     title: "Bespoke Web Development",
     desc: "Luxury e-commerce experiences tailored to the high-end jewelry market, focusing on storytelling and high conversion.",
     icon: "🌐",
-    image: "/images/bg_section3.png"
+    image: "/images/bespoke_web_dev_1779341382162.png",
+    link: "/services/bespoke-web-development"
   },
   {
     title: "Digital Sales Catalogue",
     desc: "A portable, high-resolution digital showcase for your entire collection, perfect for exhibitions and private viewings.",
     icon: "📱",
-    image: "/images/jewelry_digital_catalogue_1778945050844.png"
+    image: "/images/digital_sales_catalog_1779341397882.png",
+    link: "/services/digital-sales-catalogue"
   },
   {
     title: "CRM / ERP",
     desc: "Integrated business management solutions designed to unify your jewelry operations, from inventory to customer relations.",
     icon: "📊",
-    image: "/images/bg_section2.png"
+    image: "/images/jewelry_crm_erp_1779341413648.png",
+    link: "/services/integrated-crm-erp"
   }
 ];
 
@@ -44,12 +50,18 @@ export default function Services() {
 
         <div className="services-grid-balanced">
           {services.map((service, index) => (
-            <div key={index} className="service-card service-card-grid">
+            <Link href={service.link} key={index} className="service-card service-card-grid" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="service-icon">{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.desc}</p>
-            </div>
+            </Link>
           ))}
+        </div>
+        
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <a href="/services" className="btn btn-primary" style={{ padding: '16px 32px', fontSize: '16px' }}>
+            Explore All Services
+          </a>
         </div>
 
         <div style={{ marginTop: '80px' }}>
