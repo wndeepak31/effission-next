@@ -1,19 +1,30 @@
-import './globals.css'
+import { Inter, Cormorant_Garamond } from 'next/font/google';
+import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-canela', // using cormorant as a fallback for canela
+  display: 'swap',
+});
 
 export const metadata = {
-  title: 'Effission - Digital Brilliance for Jewelry',
-  description: 'Leading software provider in the jewelry domain, specializing in Web Development, AI-driven Automation, 3D Configuration, and Digital Catalogues.',
-}
+  title: 'Effission | The Operating System for Modern Jewelry Commerce',
+  description: 'One unified ecosystem for ERP, AI Rendering, CRM, B2B Commerce, POS, Shopify, and Automation. Built for retailers, wholesalers, and manufacturers.',
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&family=Inter:wght@400;500;600&family=Lexend+Giga:wght@300;400;500;600&family=Manrope:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
-      </head>
-      <body suppressHydrationWarning>{children}</body>
+    <html lang="en" className={`${inter.variable} ${cormorant.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning className="antialiased selection:bg-gold selection:text-black">
+        {children}
+      </body>
     </html>
-  )
+  );
 }
