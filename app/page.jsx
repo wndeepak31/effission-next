@@ -1,8 +1,9 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
-import Services from './components/Services';
-import Features from './components/Features';
+import WhoWeServe from './components/WhoWeServe';
+import PlatformModules from './components/PlatformModules';
+import Ecosystem from './components/Ecosystem';
 import Footprint from './components/Footprint';
 import Process from './components/Process';
 import TrustSection from './components/TrustSection';
@@ -16,12 +17,13 @@ export default function Home() {
       <Header />
       <Hero />
       <AboutUs />
-      <Services />
-      <Features />
+      <WhoWeServe />
+      <PlatformModules />
+      <Ecosystem />
       <Footprint />
-      <Process />
-      <TrustSection />
-      <Contact />
+      {/* <Process /> */}
+      {/* <TrustSection /> */}
+      {/* <Contact /> */}
       <Footer />
       <BackToTop />
     </>
