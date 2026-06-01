@@ -61,14 +61,14 @@ const Footprint = () => {
         transform: 'translate(-50%, -50%)',
         width: '800px', 
         height: '800px', 
-        background: 'radial-gradient(circle, rgba(0, 192, 243, 0.05) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(237, 139, 22, 0.05) 0%, transparent 70%)',
         zIndex: 0,
         pointerEvents: 'none'
       }}></div>
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-header">
-          <span className="section-label">Global Connectivity</span>
+          <span className="section-label" style={{ color: 'var(--accent-gold)' }}>Global Connectivity</span>
           <h2 className="section-title">Our Digital Presence</h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
             A worldwide network of innovation hubs and cloud infrastructure 
@@ -89,7 +89,7 @@ const Footprint = () => {
                     <h4>{cat.count}</h4>
                     <p>{cat.label}</p>
                   </div>
-                  <span style={{ fontSize: '10px', color: 'var(--accent-primary)', opacity: 0.8, fontWeight: 'bold' }}>
+                  <span style={{ fontSize: '10px', color: 'var(--accent-gold)', opacity: 0.8, fontWeight: 'bold' }}>
                     {cat.growth}
                   </span>
                 </div>
