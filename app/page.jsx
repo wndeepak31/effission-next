@@ -4,6 +4,8 @@ import AboutUs from './components/AboutUs';
 import WhoWeServe from './components/WhoWeServe';
 import PlatformModules from './components/PlatformModules';
 import Ecosystem from './components/Ecosystem';
+import WhyEffission from './components/WhyEffission';
+import AiStudio from './components/AiStudio';
 import Footprint from './components/Footprint';
 import Process from './components/Process';
 import TrustSection from './components/TrustSection';
@@ -20,6 +22,8 @@ export default function Home() {
       <WhoWeServe />
       <PlatformModules />
       <Ecosystem />
+      <WhyEffission />
+      <AiStudio />
       <Footprint />
       {/* <Process /> */}
       {/* <TrustSection /> */}
