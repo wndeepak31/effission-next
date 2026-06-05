@@ -123,16 +123,12 @@ export default function PlatformModules() {
         {/* 6 Columns & Connection Network */}
         <div style={{ position: 'relative', paddingBottom: '40px', maxWidth: '1440px', margin: '0 auto' }}>
           
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(6, 1fr)', 
-            gap: '20px'
-          }}>
+          <div className="responsive-grid-6">
             {modules.map((m) => (
               <div key={m.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 
                 {/* Module Card */}
-                <div style={{ 
+                <div className="platform-card" style={{ 
                   border: '1px solid rgba(255, 180, 50, 0.4)', 
                   borderRadius: '16px', 
                   background: 'linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(255, 180, 50, 0.05) 100%)',
@@ -148,7 +144,7 @@ export default function PlatformModules() {
                   boxShadow: 'inset 0 -20px 40px rgba(255, 180, 50, 0.05)'
                 }}>
                   {/* Background Image Provision */}
-                  <div style={{
+                  <div className="platform-card-bg" style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
@@ -163,7 +159,7 @@ export default function PlatformModules() {
                   }}></div>
                   
                   {/* Content (Z-indexed above background) */}
-                  <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', paddingTop: '80px' }}>
+                  <div className="platform-card-content" style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', paddingTop: '80px' }}>
                     {/* Content */}
                     <h4 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px' }}>{m.title}</h4>
                     <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>{m.desc}</p>
@@ -284,10 +280,7 @@ export default function PlatformModules() {
             and automation through a single jewelry-native platform.
           </p>
 
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(4, 1fr)', 
-            gap: '30px', 
+          <div className="responsive-grid-4" style={{ 
             maxWidth: '1200px', 
             margin: '0 auto',
             textAlign: 'left'
@@ -358,6 +351,24 @@ export default function PlatformModules() {
         </div>
 
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          #platform-modules .platform-card {
+            height: auto !important;
+            aspect-ratio: 4/3 !important;
+            justify-content: flex-end !important;
+            padding-bottom: 32px !important;
+          }
+          #platform-modules .platform-card-bg {
+            background-size: cover !important;
+            background-position: top center !important;
+          }
+          #platform-modules .platform-card-content {
+            padding-top: 0 !important;
+            margin-top: auto !important;
+          }
+        }
+      `}} />
     </section>
   );
 }

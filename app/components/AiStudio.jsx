@@ -450,7 +450,15 @@ export default function AiStudio() {
             margin-bottom: 16px;
           }
         }
-        @media (max-width: 768px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
+          #ai-studio .desktop-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          #ai-studio .desktop-grid > div {
+            grid-column: span 1 !important;
+          }
+        }
+        @media (max-width: 767px) {
           #ai-studio .desktop-grid {
             grid-template-columns: 1fr !important;
           }
@@ -458,16 +466,24 @@ export default function AiStudio() {
             grid-column: span 1 !important;
           }
           #ai-studio .timeline-row {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 24px;
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 24px !important;
           }
           #ai-studio .timeline-connector {
             display: none !important;
           }
           #ai-studio .stats-row {
-            flex-direction: column;
-            gap: 32px;
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 32px !important;
+          }
+          #ai-studio .stats-row > div {
+            flex: none !important;
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
           }
         }
       `}} />
