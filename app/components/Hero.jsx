@@ -10,7 +10,7 @@ export default function Hero() {
               <span className="eyebrow-text" style={{letterSpacing: '0.15em', fontWeight: 600, fontSize: '11px'}}>AI-ENABLED. CONNECTED. INTELLIGENT.</span>
             </div>
             
-            <h1 className="hero-title" style={{fontFamily: 'Georgia, serif', fontWeight: 400, letterSpacing: '-0.01em', fontSize: 'clamp(44px, 5.5vw, 64px)', lineHeight: 1.15, marginBottom: '24px'}}>
+            <h1 className="hero-title" style={{fontFamily: 'Georgia, serif', fontWeight: 400, letterSpacing: '-0.01em', fontSize: 'clamp(36px, 8vw, 64px)', lineHeight: 1.15, marginBottom: '24px'}}>
               The Operating System<br />
               for Modern<br />
               <span className="text-gold">Jewelry Commerce</span>
@@ -85,6 +85,20 @@ export default function Hero() {
           </svg>
         </div>
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          .visual-wrapper {
+            width: 100% !important;
+            right: 0 !important;
+            transform: scale(1) !important;
+            margin-top: 20px !important;
+          }
+          .visual-img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      `}} />
     </section>
   );
 }

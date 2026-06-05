@@ -20,26 +20,7 @@ export default function AboutUs() {
     '/images/brand-logo/orient.png',
   ];
 
-  const navBtnStyle = {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    zIndex: 10,
-    width: '36px',
-    height: '36px',
-    borderRadius: '50%',
-    background: '#0c0c0c',
-    border: '1px solid rgba(255, 180, 50, 0.4)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-    boxShadow: '0 0 10px rgba(255, 180, 50, 0.1)'
-  };
-
   const containerStyle = {
-    display: 'flex',
-    overflow: 'hidden',
     padding: '24px 0',
     borderRadius: '16px',
     borderTop: '1px solid rgba(255, 180, 50, 0.8)',
@@ -48,6 +29,23 @@ export default function AboutUs() {
     borderBottom: '1px solid rgba(255, 180, 50, 0.1)',
     background: 'linear-gradient(180deg, rgba(255, 180, 50, 0.05) 0%, transparent 100%)',
     boxShadow: '0 -4px 20px rgba(255, 180, 50, 0.15), inset 0 10px 30px rgba(255, 180, 50, 0.05)'
+  };
+
+  const navBtnStyle = {
+    position: 'absolute',
+    background: 'rgba(5, 5, 5, 0.8)',
+    border: '1px solid rgba(255, 180, 50, 0.3)',
+    color: 'var(--accent-gold)',
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    zIndex: 10,
+    backdropFilter: 'blur(4px)',
+    transition: 'all 0.3s ease'
   };
 
   return (
@@ -81,14 +79,14 @@ export default function AboutUs() {
         <div style={{ position: 'relative', maxWidth: '1440px', margin: '0 auto', padding: '0 40px' }}>
           
           {/* Top Carousel Navigation Arrow Left */}
-          <button style={{ ...navBtnStyle, left: '0px', top: '15%' }}>
+          <button className="nav-btn" style={{ ...navBtnStyle, left: '0px', top: '15%' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
           </button>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Top Carousel */}
             <div className="logo-carousel-container" style={containerStyle}>
-              <div style={{ display: 'flex', width: '100%' }}>
+              <div className="logo-flex-container">
                 {dummyLogos1.map((logo, i) => (
                   <div key={i} style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
                     <div className="dummy-logo" style={{ 
@@ -118,7 +116,7 @@ export default function AboutUs() {
 
             {/* Bottom Carousel */}
             <div className="logo-carousel-container" style={containerStyle}>
-              <div style={{ display: 'flex', width: '100%' }}>
+              <div className="logo-flex-container">
                 {dummyLogos2.map((logo, i) => (
                   <div key={i} style={{ display: 'flex', flex: 1, alignItems: 'center' }}>
                     <div className="dummy-logo" style={{ 
@@ -140,36 +138,33 @@ export default function AboutUs() {
           </div>
 
           {/* Top Carousel Navigation Arrow Right */}
-          <button style={{ ...navBtnStyle, right: '0px', top: '15%' }}>
+          <button className="nav-btn" style={{ ...navBtnStyle, right: '0px', top: '15%' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
           </button>
           
           {/* Bottom Carousel Navigation Arrow Left */}
-          <button style={{ ...navBtnStyle, left: '0px', top: '85%' }}>
+          <button className="nav-btn" style={{ ...navBtnStyle, left: '0px', bottom: '25%' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
           </button>
           
           {/* Bottom Carousel Navigation Arrow Right */}
-          <button style={{ ...navBtnStyle, right: '0px', top: '85%' }}>
+          <button className="nav-btn" style={{ ...navBtnStyle, right: '0px', bottom: '25%' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6"/></svg>
           </button>
         </div>
 
         {/* Stats Section at the bottom */}
-        <div style={{ 
+        <div className="responsive-grid-4" style={{ 
           marginTop: '60px',
           paddingTop: '50px',
           borderTop: '1px solid rgba(255,255,255,0.05)',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(4, 1fr)',
-          gap: '20px',
           maxWidth: '1440px',
           margin: '60px auto 0',
           paddingLeft: '40px',
           paddingRight: '40px'
         }}>
           {/* Stat 1 */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
+          <div className="about-stat" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
             <div style={{ color: 'var(--accent-gold)' }}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             </div>
@@ -180,7 +175,7 @@ export default function AboutUs() {
           </div>
           
           {/* Stat 2 */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
             <div style={{ color: 'var(--accent-gold)' }}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
@@ -191,7 +186,7 @@ export default function AboutUs() {
           </div>
           
           {/* Stat 3 */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
             <div style={{ color: 'var(--accent-gold)' }}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20"/><path d="M12 21V9"/><path d="M6 3l6 6"/><path d="M18 3l-6 6"/></svg>
             </div>
@@ -202,7 +197,7 @@ export default function AboutUs() {
           </div>
           
           {/* Stat 4 */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+          <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
             <div style={{ color: 'var(--accent-gold)' }}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
             </div>
@@ -214,6 +209,34 @@ export default function AboutUs() {
         </div>
 
       </div>
+      {/* CSS to hide navigation buttons on mobile since we use grid wrapping */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          #about .nav-btn {
+            display: none !important;
+          }
+          #about .logo-carousel-container {
+            padding: 20px 10px !important;
+          }
+          #about .dummy-logo {
+            padding: 0 !important;
+          }
+          #about .responsive-grid-4 {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 24px !important;
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+          #about .about-stat {
+            flex-direction: column !important;
+            text-align: center;
+            gap: 12px !important;
+          }
+          #about .has-border {
+            border-left: none !important;
+          }
+        }
+      `}} />
     </section>
   );
 }

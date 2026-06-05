@@ -104,10 +104,7 @@ export default function WhoWeServe() {
         </div>
 
         {/* Grid Section */}
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))', 
-          gap: '30px', 
+        <div className="responsive-grid-500" style={{ 
           maxWidth: '1440px', 
           margin: '0 auto',
           padding: '0 40px'
@@ -125,7 +122,7 @@ export default function WhoWeServe() {
             }}>
               
               {/* Background Image with Gradient Mask */}
-              <div style={{
+              <div className="who-card-bg" style={{
                 position: 'absolute',
                 top: 0,
                 right: 0,
@@ -233,6 +230,20 @@ export default function WhoWeServe() {
           ))}
         </div>
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 767px) {
+          #who-we-serve .who-card-bg {
+            width: 100% !important;
+            height: 50% !important;
+            mask-image: linear-gradient(to bottom, transparent 0%, black 100%) !important;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%) !important;
+            opacity: 0.4 !important;
+          }
+          #who-we-serve .responsive-grid-500 {
+            padding: 0 20px !important;
+          }
+        }
+      `}} />
     </section>
   );
 }

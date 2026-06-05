@@ -197,12 +197,9 @@ export default function Ecosystem() {
         </div>
 
         {/* Stats Row */}
-        <div style={{ 
+        <div className="ecosystem-stats" style={{ 
           borderTop: '1px solid rgba(255, 180, 50, 0.2)', 
           paddingTop: '60px',
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
           gap: '30px'
         }}>
           {stats.map((stat, idx) => (
@@ -219,6 +216,26 @@ export default function Ecosystem() {
         </div>
 
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        .ecosystem-stats {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .ecosystem-stats {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 767px) {
+          .ecosystem-stats {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px !important;
+          }
+        }
+      `}} />
     </section>
   );
 }

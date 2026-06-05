@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -453,6 +454,129 @@ ul {
 
   .feature-card {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive Utilities added for sections */
+.responsive-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .responsive-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .responsive-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.responsive-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .responsive-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .responsive-grid-6 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.responsive-grid-500 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  gap: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .responsive-grid-500 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .responsive-grid-500 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.responsive-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .responsive-flex-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .responsive-flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px !important;
+    width: 100%;
+  }
+  
+  .hero-stats .stat-divider {
+    display: none !important;
+  }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 767px) {
+  .header-actions .btn-sm {
+    display: none;
+  }
+}
+
+.logo-flex-container {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo-flex-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .logo-flex-container > div > div:not(.dummy-logo) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-flex-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .logo-flex-container > div > div:not(.dummy-logo) {
+    display: none !important; /* Hide dividers on mobile */
   }
 }
 

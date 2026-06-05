@@ -107,7 +107,7 @@ export default function WhyEffission() {
             }}>
               
               {/* Background Image Layer (for the user's graphic) */}
-              <div style={{
+              <div className="why-bg" style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
@@ -136,7 +136,7 @@ export default function WhyEffission() {
               }}></div>
 
               {/* Content Layer */}
-              <div style={{ 
+              <div className="why-content" style={{ 
                 position: 'relative', 
                 zIndex: 2, 
                 padding: '40px 32px',
@@ -170,23 +170,31 @@ export default function WhyEffission() {
             padding-right: 32px !important;
           }
         }
-        @media (max-width: 1024px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
           #why-effission .container > div:nth-child(2) {
+            display: grid !important;
             grid-template-columns: repeat(2, 1fr) !important;
           }
           #why-effission .container > div:nth-child(2) > div {
             grid-column: span 1 !important;
           }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
           #why-effission .container > div:nth-child(2) {
+            display: grid !important;
             grid-template-columns: 1fr !important;
           }
           #why-effission .container > div:nth-child(2) > div {
+            grid-column: span 1 !important;
+          }
+          #why-effission .why-content {
             padding-left: 24px !important;
             padding-right: 24px !important;
-            padding-top: 100px !important;
-            justify-content: flex-end;
+            padding-top: 220px !important;
+          }
+          #why-effission .why-bg {
+            background-size: 100% auto !important;
+            background-position: top center !important;
           }
         }
       `}} />
