@@ -191,7 +191,27 @@ const solutionsData = {
         icon: '✨'
       }
     ],
-    tags: ['D2C Brands', 'Online Brands', 'Marketplaces']
+    tags: ['D2C Brands', 'Online Brands', 'Marketplaces'],
+    detailedFunctionalitiesTitle: 'How Effission Empowers Digital-First Brands',
+    detailedFunctionalities: [
+      {
+        category: '',
+        items: [
+          { title: 'Omni-Channel Inventory Sync', icon: '🔄' },
+          { title: 'E-Commerce Platform Integration', icon: '🛒' },
+          { title: '3D Product Configurators', icon: '🧊' },
+          { title: 'Virtual Try-On (AR)', icon: '👓' },
+          { title: 'AI-Powered Asset Generation', icon: '✨' },
+          { title: 'Digital Marketing Analytics', icon: '📈' },
+          { title: 'Automated Order Routing', icon: '🛤️' },
+          { title: 'Real-Time Pricing Engine', icon: '🏷️' },
+          { title: 'Dropshipping Management', icon: '✈️' },
+          { title: 'Personalized CRM Journeys', icon: '💖' },
+          { title: 'Secure Payment Gateway Integrations', icon: '🔒' },
+          { title: 'Return & Exchange Automation', icon: '🔁' }
+        ]
+      }
+    ]
   }
 };
 
