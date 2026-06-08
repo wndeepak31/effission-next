@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function WhoWeServe() {
   const cards = [
@@ -110,16 +111,28 @@ export default function WhoWeServe() {
           padding: '0 40px'
         }}>
           {cards.map((card) => (
-            <div key={card.id} style={{
-              position: 'relative',
-              borderRadius: '24px',
-              border: '1px solid rgba(255, 180, 50, 0.3)',
-              background: '#0a0a0a',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: '0 10px 40px rgba(0,0,0,0.5), inset 0 0 40px rgba(255, 180, 50, 0.05)'
-            }}>
+            <Link href={`/solutions/${card.id}`} key={card.id} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
+              <div style={{
+                position: 'relative',
+                borderRadius: '24px',
+                border: '1px solid rgba(255, 180, 50, 0.3)',
+                background: '#0a0a0a',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
+                height: '100%',
+                boxShadow: '0 10px 40px rgba(0,0,0,0.5), inset 0 0 40px rgba(255, 180, 50, 0.05)',
+                transition: 'transform 0.3s ease, border-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.borderColor = 'rgba(255, 180, 50, 0.6)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255, 180, 50, 0.3)';
+              }}
+              >
               
               {/* Background Image with Gradient Mask */}
               <div className="who-card-bg" style={{
@@ -227,6 +240,7 @@ export default function WhoWeServe() {
 
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
