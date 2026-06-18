@@ -1,4 +1,5 @@
 import './globals.css'
+import IconLibrary from './components/IconLibrary'
 
 export const metadata = {
   title: 'Effission - Digital Brilliance for Jewelry',
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&family=Inter:wght@400;500;600&family=Lexend+Giga:wght@300;400;500;600&family=Manrope:wght@400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <IconLibrary />
+        {children}
+      </body>
     </html>
   )
 }
