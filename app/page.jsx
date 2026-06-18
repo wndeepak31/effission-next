@@ -18,12 +18,12 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <AboutUs />
-      <WhoWeServe />
-      <PlatformModules />
+      <WhyEffission />  
       <Ecosystem />
-      <WhyEffission />
+      <WhoWeServe />
       <AiStudio />
+      <AboutUs />
+      <PlatformModules />
       <Footprint />
       {/* <Process /> */}
       {/* <TrustSection /> */}

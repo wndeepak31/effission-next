@@ -13,7 +13,7 @@ export default function Hero() {
             <h1 className="hero-title" style={{fontFamily: 'Georgia, serif', fontWeight: 400, letterSpacing: '-0.01em', fontSize: 'clamp(36px, 8vw, 64px)', lineHeight: 1.15, marginBottom: '24px'}}>
               The Operating System<br />
               for Modern<br />
-              <span className="text-gold">Jewelry Commerce</span>
+              <span className="text-gold">Jewelry Businesses</span>
             </h1>
             
             <p className="hero-desc" style={{fontSize: '16px', lineHeight: 1.7, opacity: 0.8, maxWidth: '480px', marginBottom: '40px'}}>
