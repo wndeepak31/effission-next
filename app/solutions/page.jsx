@@ -225,46 +225,83 @@ export default function SolutionsPage() {
           <div className="container">
             <h3 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '22px', fontFamily: 'Georgia, serif', fontWeight: 400 }}>Powering Established Jewelry Businesses Worldwide</h3>
             
-            <div className="logo-strip">
-               <span>jtv</span>
-               <span>MALABAR</span>
-               <span>CLEAN ORIGIN</span>
-               <span>DISNEY FINE JEWELRY</span>
-               <span>BAPALAL</span>
-               <span>KBS</span>
-               <span>EL ZAIN</span>
-               <span>IRASVA</span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
+               {[
+                 { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
+                 { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
+                 { src: '/images/brand-logo/clean-origin.png', alt: 'Clean Origin' },
+                 { src: '/images/brand-logo/disney.png', alt: 'Disney Fine Jewelry' },
+                 { src: '/images/brand-logo/bapalal-2.png', alt: 'Bapalal Keshavlal' },
+                 { src: '/images/brand-logo/kbs.png', alt: 'KBS' },
+                 { src: '/images/brand-logo/alzain.png', alt: 'El Zain' },
+                 { src: '/images/brand-logo/irasva.png', alt: 'Irasva' },
+                 { src: '/images/brand-logo/diamrusa.png', alt: 'Diamrusa' },
+                 { src: '/images/brand-logo/orient.png', alt: 'Orient' },
+                 { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
+                 { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
+               ].map((logo, i, arr) => (
+                 <div key={i} style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+                   <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
+                     <img src={logo.src} alt={logo.alt} style={{ maxHeight: '35px', maxWidth: '90px', width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9 }} />
+                   </div>
+                   {i < arr.length - 1 && (
+                     <div style={{ width: '1px', height: '30px', background: 'linear-gradient(180deg, transparent, rgba(255,255,255,0.15), transparent)', flexShrink: 0 }}></div>
+                   )}
+                 </div>
+               ))}
             </div>
             
-            <div className="stats-grid">
-               <div className="stat-box">
-                  <svg className="ef-icon"><use href="#icon-commerce"/></svg>
-                  <div>
-                    <div className="stat-val text-gold">20+</div>
-                    <div className="stat-lbl">Countries</div>
-                  </div>
-               </div>
-               <div className="stat-box">
-                  <svg className="ef-icon"><use href="#icon-customer"/></svg>
-                  <div>
-                    <div className="stat-val text-gold">3000+</div>
-                    <div className="stat-lbl">Businesses</div>
-                  </div>
-               </div>
-               <div className="stat-box">
-                  <svg className="ef-icon"><use href="#icon-analytics"/></svg>
-                  <div>
-                    <div className="stat-val text-gold">Millions</div>
-                    <div className="stat-lbl">of Transactions</div>
-                  </div>
-               </div>
-               <div className="stat-box">
-                  <svg className="ef-icon"><use href="#icon-automation"/></svg>
-                  <div>
-                    <div className="stat-val text-gold">99.9%</div>
-                    <div className="stat-lbl">Uptime</div>
-                  </div>
-               </div>
+            <div className="responsive-grid-4" style={{ 
+              paddingTop: '50px',
+              borderTop: '1px solid rgba(255,255,255,0.05)',
+              maxWidth: '1440px',
+              margin: '0 auto',
+              paddingLeft: '40px',
+              paddingRight: '40px'
+            }}>
+              {/* Stat 1 */}
+              <div className="about-stat" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
+                <div style={{ color: 'var(--accent-gold)' }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: '26px', fontWeight: '400', fontFamily: 'Georgia, serif' }}>20+</div>
+                  <div style={{ fontSize: '13px', opacity: 0.6 }}>Countries</div>
+                </div>
+              </div>
+              
+              {/* Stat 2 */}
+              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ color: 'var(--accent-gold)' }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: '26px', fontWeight: '400', fontFamily: 'Georgia, serif' }}>3000+</div>
+                  <div style={{ fontSize: '13px', opacity: 0.6 }}>Businesses</div>
+                </div>
+              </div>
+              
+              {/* Stat 3 */}
+              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ color: 'var(--accent-gold)' }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20"/><path d="M12 21V9"/><path d="M6 3l6 6"/><path d="M18 3l-6 6"/></svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: '26px', fontWeight: '400', fontFamily: 'Georgia, serif' }}>Millions</div>
+                  <div style={{ fontSize: '13px', opacity: 0.6 }}>Happy Customers</div>
+                </div>
+              </div>
+              
+              {/* Stat 4 */}
+              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ color: 'var(--accent-gold)' }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                </div>
+                <div>
+                  <div style={{ fontSize: '26px', fontWeight: '400', fontFamily: 'Georgia, serif' }}>99.9%</div>
+                  <div style={{ fontSize: '13px', opacity: 0.6 }}>Uptime & Reliability</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
