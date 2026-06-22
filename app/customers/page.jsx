@@ -10,7 +10,7 @@ export default function CustomersPage() {
   return (
     <>
       <Header />
-      <main className="customers-page" style={{ paddingTop: '20px' }}>
+      <main className="customers-page" style={{ paddingTop: '60px' }}>
         {/* 1. Hero Section */}
         <section className={styles.section}>
           <div className="container">
