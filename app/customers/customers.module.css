@@ -1,0 +1,338 @@
+/* Typography */
+.heroTitle {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.sectionTitleSmall {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #fff;
+}
+
+/* Sections */
+.section {
+  padding: 30px 20px;
+}
+
+.sectionTight {
+  padding: 30px 20px;
+}
+
+/* Header */
+.headerNav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hero */
+.heroLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 650px;
+}
+
+.heroVisual {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.ctaBtn {
+  width: auto;
+}
+
+/* Stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 40px;
+  background-color: #000;
+  border: 1px solid rgba(255, 180, 50, 0.2);
+  border-radius: 12px;
+}
+
+/* Trusted By */
+.trustedGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.trustedColumn {
+  padding: 0 30px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.trustedColumn:last-child {
+  border-right: none;
+}
+
+/* 4 Column Cards (Success Stories & Business Models) */
+.grid4Col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Global Reach */
+.globalReachLayout {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.globalReachVisual {
+  flex: 2;
+  position: relative;
+  min-height: 500px;
+}
+
+.globalReachContent {
+  flex: 1;
+}
+
+/* 6 Column Grids */
+.grid6Col {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.whyChooseItem {
+  padding: 0 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.whyChooseItem:last-child {
+  border-right: none;
+}
+
+/* Footer CTA */
+.ctaLayout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 60px;
+  gap: 80px;
+}
+
+.ctaText {
+  max-width: 450px;
+  text-align: left;
+}
+
+.ctaBtnsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 240px;
+}
+
+.ctaGradient {
+  background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.9) 45%, rgba(0,0,0,1) 100%);
+}
+
+/* =========================================================================
+   TABLET RESPONSIVE (768px - 1024px)
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 48px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+  .section {
+    padding: 30px 20px;
+  }
+
+  .headerNav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .heroVisual {
+    min-height: 400px;
+  }
+
+  .statsGrid {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .trustedGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+  .trustedColumn {
+    border-right: none;
+  }
+
+  .grid4Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .globalReachLayout {
+    flex-direction: column;
+  }
+  .globalReachVisual {
+    min-height: 350px;
+  }
+
+  .grid6Col {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 16px;
+  }
+  .whyChooseItem {
+    border-right: none;
+  }
+}
+
+/* =========================================================================
+   MOBILE RESPONSIVE (up to 767px)
+   ========================================================================= */
+@media (max-width: 767px) {
+  .heroTitle {
+    font-size: 36px;
+    text-align: center;
+  }
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .sectionTitleSmall {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .section {
+    padding: 30px 20px;
+  }
+  .sectionTight {
+    padding: 30px 20px;
+  }
+
+  .heroLayout {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+  .heroContent p {
+    text-align: center;
+  }
+  .heroVisual {
+    min-height: 300px;
+  }
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .trustedGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .trustedColumn {
+    padding: 0 10px;
+  }
+
+  .grid4Col {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .globalReachLayout {
+    gap: 30px;
+  }
+  .globalReachVisual {
+    min-height: 250px;
+  }
+
+  .grid6Col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+  }
+
+  .ctaLayout {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  .ctaText {
+    text-align: center;
+  }
+  .ctaGradient {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 100%);
+  }
+  .ctaBtnsContainer {
+    width: 100%;
+  }
+}
