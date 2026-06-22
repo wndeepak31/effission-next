@@ -33,8 +33,8 @@ export default function Header() {
         <ul className="nav-links">
           <li><Link href="/solutions" className="nav-item">Solutions <ChevronDown /></Link></li>
           <li><Link href="/platform" className="nav-item">Platform <ChevronDown /></Link></li>
-          <li><Link href="#aistudio" className="nav-item">AI Studio <ChevronDown /></Link></li>
-          <li><Link href="#customers" className="nav-item">Customers <span style={{ fontSize: '8px', marginLeft: '6px', opacity: 0.7, verticalAlign: 'middle' }}>•</span></Link></li>
+          <li><Link href="/ai-studio" className="nav-item">AI Studio <ChevronDown /></Link></li>
+          <li><Link href="/customers" className="nav-item">Customers <span style={{ fontSize: '8px', marginLeft: '6px', opacity: 0.7, verticalAlign: 'middle' }}>•</span></Link></li>
           <li><Link href="#company" className="nav-item">Company <ChevronDown /></Link></li>
         </ul>
       </nav>
