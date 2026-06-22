@@ -20,6 +20,7 @@ export default function AiStudioPage() {
           <div className="container">
             <div className="hero-split">
               <div className="hero-content">
+                <h4 style={{ color: 'var(--accent-gold, #ed8b16)', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px', fontWeight: 600 }}>AI Studio</h4>
                 <h1 className="hero-title" style={{ fontFamily: 'Georgia, serif', fontWeight: 400, fontSize: 'clamp(36px, 6vw, 64px)', lineHeight: 1.15, marginBottom: '24px' }}>
                   <span style={{ whiteSpace: 'nowrap' }}>AI Commerce &</span><br />
                   Automation<br />
