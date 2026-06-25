@@ -1,0 +1,363 @@
+/* Typography */
+.heroTitle {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+/* Sections */
+.sectionTitle {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.section {
+  padding: 20px 20px;
+}
+
+.wideContainer {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.trustContainer {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 32px 24px;
+  background-color: #0c0c0c;
+}
+
+.grid4Col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.trustCard {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 40px 24px;
+  text-align: center;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valueContainer {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px 20px;
+  background-color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.valueContent {
+  flex: 1;
+  max-width: 500px;
+}
+
+.valueVisual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.centerCore {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 1px solid rgba(237, 139, 22, 0.8);
+  box-shadow: 0 0 60px rgba(237, 139, 22, 0.4), inset 0 0 30px rgba(237, 139, 22, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: #050505;
+}
+
+.nodeWrapper {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.nodeIcon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #0a0a0a;
+  border: 1px solid rgba(237, 139, 22, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ed8b16;
+}
+
+.nodeLabel {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.labelRight {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 16px;
+}
+
+.labelLeft {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 16px;
+}
+
+.labelBottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+}
+
+/* Hero */
+.heroLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 650px;
+}
+
+.heroVisual {
+  flex: 1;
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.ctaBtn {
+  width: auto;
+}
+
+/* Responsive Layout Classes */
+.philosophyLayout,
+.connectedLayout,
+.leadershipLayout,
+.contactLayout {
+  display: flex;
+}
+
+.philosophyLayout {
+  align-items: center;
+}
+
+.connectedLayout {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.leadershipLayout {
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.contactLayout {
+  gap: 40px;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+}
+
+.verticalDivider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.verticalDivider.tall {
+  height: 140px;
+}
+
+.verticalDivider.short {
+  height: 50px;
+}
+
+.halfBgImage {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 45%;
+  z-index: 0;
+}
+
+.halfBgImage.right {
+  right: 0;
+}
+
+.halfBgImage.left {
+  left: 0;
+}
+
+.halfBgImage.large {
+  width: 60%;
+}
+
+/* =========================================================================
+   TABLET RESPONSIVE (768px - 1024px)
+   ========================================================================= */
+@media (max-width: 1024px) {
+  .section {
+    padding: 30px 20px;
+  }
+
+  .heroVisual {
+    min-height: 400px;
+  }
+
+  .grid4Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .leadershipLayout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .verticalDivider.tall {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+/* =========================================================================
+   MOBILE RESPONSIVE (up to 767px)
+   ========================================================================= */
+@media (max-width: 767px) {
+  .heroTitle {
+    text-align: center;
+  }
+
+  .section {
+    padding: 30px 20px;
+  }
+
+  .heroLayout {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .heroContent p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroVisual {
+    min-height: 300px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .grid4Col {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .valueContainer {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 60px;
+  }
+
+  .valueVisual {
+    min-height: 400px;
+    transform: scale(0.7);
+  }
+
+  /* Layout Overrides */
+  .philosophyLayout,
+  .connectedLayout,
+  .leadershipLayout,
+  .contactLayout {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .philosophyLayout, .connectedLayout {
+    align-items: flex-start;
+  }
+
+  .contactLayout {
+    padding: 30px 20px !important;
+  }
+
+  .formRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .verticalDivider {
+    width: 100% !important;
+    height: 1px !important;
+    margin: 20px 0;
+  }
+
+  .halfBgImage,
+  .halfBgImage.large {
+    width: 100%;
+    opacity: 0.2;
+    z-index: 0;
+  }
+  
+  .contentBox {
+    max-width: 100% !important;
+  }
+
+  .contactLayout > div {
+    flex: none !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
