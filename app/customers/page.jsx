@@ -16,7 +16,7 @@ export default function CustomersPage() {
           <div className="container">
             <div className={styles.heroLayout}>
               <div className={styles.heroContent}>
-                <h4 style={{ color: 'var(--accent-gold, #ed8b16)', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px', fontWeight: 600 }}>Customers</h4>
+                <h4 style={{ color: 'var(--accent-gold, #ed8b16)', fontSize: '13px', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '20px', fontWeight: 400 }}>Customers</h4>
                 <h1 className={styles.heroTitle}>
                   Trusted By Leading<br />
                   Jewelry Businesses<br />
@@ -53,7 +53,7 @@ export default function CustomersPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
                 <div>
-                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', color: '#fff' }}>20+</div>
+                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', fontWeight: 400, color: '#fff' }}>20+</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Countries</div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function CustomersPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                 <div>
-                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', color: '#fff' }}>3000+</div>
+                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', fontWeight: 400, color: '#fff' }}>3000+</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Businesses</div>
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function CustomersPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                 <div>
-                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', color: '#fff' }}>Millions</div>
+                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', fontWeight: 400, color: '#fff' }}>Millions</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Transactions</div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ export default function CustomersPage() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
                 <div>
-                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', color: '#fff' }}>99.9%</div>
+                  <div style={{ fontSize: '32px', fontFamily: 'Georgia, serif', fontWeight: 400, color: '#fff' }}>99.9%</div>
                   <div style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>Uptime</div>
                 </div>
               </div>
@@ -180,16 +180,16 @@ export default function CustomersPage() {
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>JTV (USA)</div>
-                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', marginBottom: '16px' }}>Personalization At Scale</h3>
+                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px' }}>Personalization At Scale</h3>
                   <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px', flex: 1 }}>Helping millions of customers create personalized jewelry with confidence.</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
                     <div>
-                      <div style={{ fontSize: '18px', fontWeight: 'bold' }}>Millions+</div>
+                      <div style={{ fontSize: '18px', fontWeight: 400 }}>Millions+</div>
                       <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Personalized Combinations</div>
                     </div>
                   </div>
-                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     Read Story <span>→</span>
                   </Link>
                 </div>
@@ -202,16 +202,16 @@ export default function CustomersPage() {
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>Malabar Gold & Diamonds</div>
-                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', marginBottom: '16px' }}>Connected Commerce</h3>
+                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px' }}>Connected Commerce</h3>
                   <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px', flex: 1 }}>Powering B2B engagement across multiple markets in the Middle East.</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                     <div>
-                      <div style={{ fontSize: '18px', fontWeight: 'bold' }}>200+</div>
+                      <div style={{ fontSize: '18px', fontWeight: 400 }}>200+</div>
                       <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Active Users</div>
                     </div>
                   </div>
-                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     Read Story <span>→</span>
                   </Link>
                 </div>
@@ -224,16 +224,16 @@ export default function CustomersPage() {
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>Clean Origin (USA)</div>
-                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', marginBottom: '16px' }}>Digital-First Growth</h3>
+                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px' }}>Digital-First Growth</h3>
                   <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px', flex: 1 }}>Transforming online experiences and driving global digital sales.</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                     <div>
-                      <div style={{ fontSize: '18px', fontWeight: 'bold' }}>2X</div>
+                      <div style={{ fontSize: '18px', fontWeight: 400 }}>2X</div>
                       <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Online Growth</div>
                     </div>
                   </div>
-                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     Read Story <span>→</span>
                   </Link>
                 </div>
@@ -246,16 +246,16 @@ export default function CustomersPage() {
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>KBS (USA)</div>
-                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', marginBottom: '16px' }}>Modern Operations</h3>
+                  <h3 style={{ fontSize: '20px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px' }}>Modern Operations</h3>
                   <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', lineHeight: 1.6, marginBottom: '24px', flex: 1 }}>Streamlining wholesale operations with real-time inventory visibility.</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
                     <div>
-                      <div style={{ fontSize: '18px', fontWeight: 'bold' }}>40%</div>
+                      <div style={{ fontSize: '18px', fontWeight: 400 }}>40%</div>
                       <div style={{ fontSize: '12px', color: 'rgba(255,255,255,0.5)' }}>Increase in Efficiency</div>
                     </div>
                   </div>
-                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 600, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <Link href="#" style={{ color: 'var(--accent-gold, #ed8b16)', textDecoration: 'none', fontSize: '14px', fontWeight: 400, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     Read Story <span>→</span>
                   </Link>
                 </div>
@@ -326,7 +326,7 @@ export default function CustomersPage() {
             <div className={styles.globalReachLayout}>
               {/* Left Text */}
               <div className={styles.globalReachContent}>
-                <h2 style={{ fontSize: '32px', fontFamily: 'Georgia, serif', marginBottom: '20px' }}>Global Reach</h2>
+                <h2 style={{ fontSize: '32px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '20px' }}>Global Reach</h2>
                 <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '15px', lineHeight: 1.6, marginBottom: '40px' }}>
                   Effission powers jewelry businesses across the globe.
                 </p>
@@ -355,7 +355,7 @@ export default function CustomersPage() {
                       <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--accent-gold, #ed8b16)' }}></div>
                     </div>
                     <div>
-                      <div style={{ color: '#fff', fontSize: '14px', fontWeight: 'bold' }}>{item.country}</div>
+                      <div style={{ color: '#fff', fontSize: '14px', fontWeight: 400 }}>{item.country}</div>
                       <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px' }}>{item.desc}</div>
                     </div>
                   </div>
@@ -424,7 +424,7 @@ export default function CustomersPage() {
                     <div style={{ height: '32px', marginBottom: '12px', color: 'var(--accent-gold, #ed8b16)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">{item.icon}</svg>
                     </div>
-                    <div style={{ fontSize: '13px', color: '#fff', fontWeight: '500' }}>{item.title}</div>
+                    <div style={{ fontSize: '13px', color: '#fff', fontWeight: 400 }}>{item.title}</div>
                   </div>
                 ))}
               </div>
@@ -447,14 +447,14 @@ export default function CustomersPage() {
 
             <div className={styles.ctaLayout}>
               <div className="cta-text" style={{ maxWidth: '450px' }}>
-                <h2 style={{ fontSize: '36px', fontFamily: 'Georgia, serif', marginBottom: '16px', lineHeight: 1.2, color: '#fff' }}>Join Leading Jewelry<br />Businesses Worldwide</h2>
+                <h2 style={{ fontSize: '36px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '16px', lineHeight: 1.2, color: '#fff' }}>Join Leading Jewelry<br />Businesses Worldwide</h2>
                 <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>Discover how Effission helps jewelry companies modernize operations, accelerate growth, and scale globally.</p>
               </div>
               <div className="cta-btns" style={{ display: 'flex', flexDirection: 'column', gap: '16px', minWidth: '240px' }}>
-                <Link href="/contact" style={{ backgroundColor: 'var(--accent-gold, #ed8b16)', color: '#fff', padding: '16px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Link href="/contact" style={{ backgroundColor: 'var(--accent-gold, #ed8b16)', color: '#fff', padding: '16px 24px', borderRadius: '6px', fontWeight: 400, textDecoration: 'none', textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   Book a Demo <span>→</span>
                 </Link>
-                <Link href="/contact" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent-gold, #ed8b16)', color: '#fff', padding: '16px 24px', borderRadius: '6px', fontWeight: 600, textDecoration: 'none', textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Link href="/contact" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent-gold, #ed8b16)', color: '#fff', padding: '16px 24px', borderRadius: '6px', fontWeight: 400, textDecoration: 'none', textAlign: 'center', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   Talk To An Expert <span style={{ color: 'var(--accent-gold, #ed8b16)' }}>→</span>
                 </Link>
               </div>
