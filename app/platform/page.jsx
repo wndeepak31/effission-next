@@ -13,7 +13,7 @@ export default function PlatformPage() {
       <main className="platform-page" style={{ paddingTop: '60px' }}>
 
         {/* 1. Hero Section */}
-        <section className="platform-hero section">
+        <section className="platform-hero section" style={{ paddingBottom: '20px' }}>
           <div className="container">
             <div className="hero-split">
               <div className="hero-content">
@@ -51,8 +51,8 @@ export default function PlatformPage() {
               </div>
 
               <div className="hero-visual" style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div className="visual-wrapper" style={{ position: 'relative', width: '115%', right: '-5%', transform: 'scale(1.15)', aspectRatio: 'auto', maxWidth: 'none' }}>
-                  <img src="/images/solutions/platform-bg-1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
+                <div className="visual-wrapper solutions-visual-wrapper">
+                  <img src="/images/platform/platform-bg-1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function PlatformPage() {
               Every transaction updates the same operational record.
             </p>
 
-            <div style={{
+            <div className="process-flow-container" style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -99,7 +99,7 @@ export default function PlatformPage() {
                 { label: 'Analytics', icon: <><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></> },
                 { label: 'Automation', icon: <><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></> }
               ].map((item, index, arr) => (
-                <div key={index} style={{ display: 'flex', alignItems: 'center', flex: index < arr.length - 1 ? 1 : 'none' }}>
+                <div key={index} className="process-flow-step" style={{ display: 'flex', alignItems: 'center', flex: index < arr.length - 1 ? 1 : 'none' }}>
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: '70px' }}>
                     <div style={{
                       width: '60px',
@@ -151,55 +151,55 @@ export default function PlatformPage() {
                 {
                   title: <>Vendor<br />Management</>,
                   desc: 'Control sourcing, purchases, approvals, and supplier relationships.',
-                  img: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/vendor%20management.png',
                   icon: <><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="17" y1="11" x2="23" y2="11" /></>
                 },
                 {
                   title: <>Inventory<br />Intelligence</>,
                   desc: 'Track metals, diamonds, gemstones, and finished jewelry across every location.',
-                  img: 'https://images.unsplash.com/photo-1599643478514-4a4805c93542?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/inventory%20intelligence.png',
                   icon: <><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></>
                 },
                 {
                   title: <>Manufacturing<br />& Job Work</>,
                   desc: 'Manage production, job work, outsourcing, and assembly with complete control.',
-                  img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/manufacturing%20and%20job%20work.png',
                   icon: <><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" /><path d="M17 18h1" /><path d="M12 18h1" /><path d="M7 18h1" /></>
                 },
                 {
                   title: <>Pricing &<br />Margin Intelligence</>,
                   desc: 'Accurate costing, pricing strategies, metal rates, stone rates, and profitability.',
-                  img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/pricing%20and%20margin%20intelligence.png',
                   icon: <><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></>
                 },
                 {
                   title: 'Sales & Orders',
                   desc: 'Retail, wholesale, custom orders, exhibitions, and seamless order management.',
-                  img: 'https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/sales%20and%20orders1.png',
                   icon: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></>
                 },
                 {
                   title: 'Customer Growth',
                   desc: 'CRM, loyalty, WhatsApp, campaigns, schemes, and repeat revenue.',
-                  img: 'https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/customer%20growth1.png',
                   icon: <><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></>
                 },
                 {
                   title: <>Trade Show<br />& Memo</>,
                   desc: 'Order booking, memo issuance, approvals, and invoicing made simple.',
-                  img: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/trade%20show%20and%20memo1.png',
                   icon: <><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" /></>
                 },
                 {
                   title: 'Commerce',
                   desc: 'B2B, B2C, marketplaces, stores, and omnichannel commerce that converts.',
-                  img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/commerce.png',
                   icon: <><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" /></>
                 },
                 {
                   title: <>Analytics &<br />Automation</>,
                   desc: 'Real-time dashboards, insights, alerts, and intelligent automation.',
-                  img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/analytics%20and%20automation1.png',
                   icon: <><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /><polyline points="2 16 6 12 12 18 22 8" /></>
                 }
               ].map((item, idx) => (
@@ -252,7 +252,7 @@ export default function PlatformPage() {
               {[
                 {
                   title: 'Inventory Precision',
-                  img: 'https://images.unsplash.com/photo-1620288627228-dbf37b120c92?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/inventory%20precision.png',
                   items: [
                     'Gold, Silver, Platinum',
                     'Natural & Lab-Grown Diamonds',
@@ -263,7 +263,7 @@ export default function PlatformPage() {
                 },
                 {
                   title: 'Manufacturing Precision',
-                  img: 'https://images.unsplash.com/photo-1605100804763-247f67b2548e?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/manufacturing%20precision.png',
                   items: [
                     'Metal Issue & Stone Issue',
                     'WIP Tracking',
@@ -274,7 +274,7 @@ export default function PlatformPage() {
                 },
                 {
                   title: 'Financial Precision',
-                  img: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400&auto=format&fit=crop',
+                  img: '/images/platform/financial%20precision.png',
                   items: [
                     'Vendor Settlements',
                     'Customer Balances',
@@ -342,7 +342,7 @@ export default function PlatformPage() {
                     <h3 style={{ fontSize: '26px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '8px' }}>Customer Growth Engine</h3>
                     <p style={{ color: 'var(--accent-gold)', fontSize: '14px', fontWeight: 500 }}>Turn First-Time Buyers Into Lifetime Customers</p>
                   </div>
-                  <img src="/images/solutions/platform-bg-2.png" alt="Customer Growth Engine" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
+                  <img src="/images/platform/platform-bg-2.png" alt="Customer Growth Engine" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
                 </div>
 
                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -380,7 +380,7 @@ export default function PlatformPage() {
                 </div>
 
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img src="/images/solutions/platform-bg-3.png" alt="Unified Jewelry Data Foundation" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
+                  <img src="/images/platform/platform-bg-3.png" alt="Unified Jewelry Data Foundation" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
                 </div>
               </div>
             </div>
@@ -392,7 +392,7 @@ export default function PlatformPage() {
           <div className="container">
             <h3 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '38px', fontFamily: 'Georgia, serif', fontWeight: 400 }}>Powering Established Jewelry Businesses Worldwide</h3>
 
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
+            <div className="logo-strip-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
               {[
                 { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
                 { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
@@ -407,7 +407,7 @@ export default function PlatformPage() {
                 { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
                 { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
               ].map((logo, i, arr) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+                <div key={i} className="logo-strip-item" style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
                   <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
                     <img src={logo.src} alt={logo.alt} style={{ maxHeight: '35px', maxWidth: '90px', width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9 }} />
                   </div>
@@ -418,7 +418,7 @@ export default function PlatformPage() {
               ))}
             </div>
 
-            <div className="responsive-grid-4" style={{
+            <div className="responsive-grid-4 about-stats-container" style={{
               paddingTop: '50px',
               borderTop: '1px solid rgba(255,255,255,0.05)',
               maxWidth: '1440px',
@@ -476,39 +476,30 @@ export default function PlatformPage() {
         {/* 7. Footer CTA */}
         <section className="cta-section section" style={{ padding: '20px 0 120px 0' }}>
           <div className="container" style={{ maxWidth: '1400px' }}>
-            <div style={{
-              display: 'flex',
-              border: '1px solid rgba(237, 139, 22, 0.2)',
-              borderRadius: '12px',
-              backgroundColor: '#050505',
-              overflow: 'hidden',
-              alignItems: 'stretch',
-              position: 'relative',
-              minHeight: '180px'
-            }}>
+            <div className="cta-banner">
               {/* Left Content */}
-              <div style={{ flex: 1, padding: '30px 40px', zIndex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <h2 style={{ fontSize: '30px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '12px', lineHeight: 1.2, color: '#fff' }}>
+              <div className="cta-banner-content">
+                <h2>
                   Run Your Entire Jewelry Business<br />On One Platform
                 </h2>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '13px', lineHeight: 1.5, marginBottom: '20px', maxWidth: '450px' }}>
+                <p>
                   From sourcing and manufacturing to commerce and customer growth, Effission connects every operation through a single jewelry-native foundation.
                 </p>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <Link href="/contact" style={{ backgroundColor: 'var(--accent-gold)', color: '#fff', padding: '10px 20px', borderRadius: '6px', fontWeight: 500, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }} className="hover-scale">
+                <div className="cta-banner-btns">
+                  <Link href="/contact" className="btn btn-gold hover-scale">
                     Book a Demo <span>&rarr;</span>
                   </Link>
-                  <Link href="/contact" style={{ backgroundColor: 'rgba(0,0,0,0.4)', border: '1px solid rgba(237, 139, 22, 0.4)', color: '#fff', padding: '10px 20px', borderRadius: '6px', fontWeight: 500, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }} className="hover-scale">
-                    Talk To An Expert <span style={{ color: 'var(--accent-gold)' }}>&rarr;</span>
+                  <Link href="/contact" className="btn btn-outline-gold hover-scale">
+                    Talk To An Expert <span>&rarr;</span>
                   </Link>
                 </div>
               </div>
 
               {/* Right Image */}
-              <div style={{ flex: 1.5, position: 'relative', zIndex: 1 }}>
-                <img src="/images/solutions/platform-bg-4.png" alt="Effission Platform" style={{ width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', right: 0, top: 0, objectPosition: 'center center' }} />
+              <div className="cta-banner-visual">
+                <img src="/images/platform/platform-bg-4.png" alt="Effission Platform" />
                 {/* Gradient overlay to seamlessly fade the image into the black background on the left */}
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #050505 0%, transparent 30%)' }}></div>
+                <div className="cta-banner-overlay"></div>
               </div>
             </div>
           </div>

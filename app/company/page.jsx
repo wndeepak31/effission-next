@@ -405,10 +405,10 @@ export default function CompanyPage() {
                   Our Philosophy
                 </div>
 
-                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '42px', fontWeight: 400, color: '#fff', lineHeight: 1.2, marginBottom: '4px' }}>
+                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: 'clamp(28px, 6vw, 42px)', fontWeight: 400, color: '#fff', lineHeight: 1.2, marginBottom: '4px' }}>
                   Jewelry Businesses Don't<br />Manage Products.
                 </h2>
-                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '42px', fontWeight: 400, color: 'var(--accent-gold, #ed8b16)', lineHeight: 1.2, marginBottom: '40px' }}>
+                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: 'clamp(28px, 6vw, 42px)', fontWeight: 400, color: 'var(--accent-gold, #ed8b16)', lineHeight: 1.2, marginBottom: '40px' }}>
                   They Manage Value.
                 </h2>
 
@@ -479,7 +479,7 @@ export default function CompanyPage() {
                   The Future of Jewelry Commerce
                 </div>
 
-                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: '42px', fontWeight: 400, color: '#fff', lineHeight: 1.2, marginBottom: '24px' }}>
+                <h2 style={{ fontFamily: 'Georgia, serif', fontSize: 'clamp(28px, 6vw, 42px)', fontWeight: 400, color: '#fff', lineHeight: 1.2, marginBottom: '24px' }}>
                   The Future Is Connected.
                 </h2>
 
