@@ -16,7 +16,7 @@ export default function AiStudioPage() {
       <main className="ai-studio-page" style={{ paddingTop: '60px' }}>
 
         {/* 1. Hero Section */}
-        <section className="platform-hero section">
+        <section className="platform-hero section" style={{ paddingBottom: '20px' }}>
           <div className="container">
             <div className="hero-split">
               <div className="hero-content">
@@ -40,7 +40,7 @@ export default function AiStudioPage() {
               </div>
 
               <div className="hero-visual" style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div className="visual-wrapper" style={{ position: 'relative', width: '115%', right: '-5%', transform: 'scale(1.15)', aspectRatio: 'auto', maxWidth: 'none' }}>
+                <div className="visual-wrapper solutions-visual-wrapper">
                   <img src="/images/ai-studio/ai-bg-1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
                 </div>
               </div>
@@ -346,11 +346,11 @@ export default function AiStudioPage() {
 
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'space-between', height: '100%', flexWrap: 'wrap' }}>
                 {[
-                  { title: "Photoreal Rendering", img: "/images/hand-render-1.jpg" },
-                  { title: "On-Model Visualization", img: "/images/hand-render-2.jpg" },
-                  { title: "Virtual Inventory", img: "/images/hand-render-3.jpg" },
-                  { title: "Interactive Configurators", img: "/images/hand-render-4.jpg" },
-                  { title: "360° Assets", img: "/images/hand-render-5.jpg" }
+                  { title: "Photoreal Rendering", img: "/images/ai-studio/photoreal%20rendering.png" },
+                  { title: "On-Model Visualization", img: "/images/ai-studio/On-model%20visualization.png" },
+                  { title: "Virtual Inventory", img: "/images/ai-studio/virtual%20inventory.png" },
+                  { title: "Interactive Configurators", img: "/images/ai-studio/interactive%20configurators.png" },
+                  { title: "360° Assets", img: "/images/ai-studio/360%20ASSETS.png" }
                 ].map((card, idx) => (
                   <div key={idx} style={{
                     flex: '1 1 18%',

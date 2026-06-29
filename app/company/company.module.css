@@ -328,6 +328,9 @@
     align-items: flex-start;
   }
 
+  .philosophyLayout,
+  .connectedLayout,
+  .leadershipLayout,
   .contactLayout {
     padding: 30px 20px !important;
   }

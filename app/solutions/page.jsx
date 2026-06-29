@@ -13,7 +13,7 @@ export default function SolutionsPage() {
       <main className="solutions-page" style={{ paddingTop: '60px' }}>
 
         {/* 1. Hero Section */}
-        <section className="solutions-hero section">
+        <section className="solutions-hero section" style={{ paddingBottom: '20px' }}>
           <div className="container">
             <div className="hero-split">
               <div className="hero-content">
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
               </div>
 
               <div className="hero-visual" style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div className="visual-wrapper" style={{ position: 'relative', width: '115%', right: '-5%', transform: 'scale(1.15)', aspectRatio: 'auto', maxWidth: 'none' }}>
+                <div className="visual-wrapper solutions-visual-wrapper">
                   <img src="/images/solutions/solution-bg-1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
                 </div>
               </div>
@@ -60,7 +60,7 @@ export default function SolutionsPage() {
         </section>
 
         {/* 2. Choose Your Business Model */}
-        <section className="business-models section">
+        <section className="business-models section" style={{ paddingTop: '20px' }}>
           <div className="container">
             <div className="section-header" style={{ marginBottom: '60px' }}>
               <h2 className="section-title" style={{ fontFamily: 'Georgia, serif', fontWeight: 400 }}>Choose Your Business Model</h2>
@@ -73,7 +73,7 @@ export default function SolutionsPage() {
             <div className="bmodel-grid">
               {/* Retailers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(https://images.unsplash.com/photo-1599643477874-51be67c4e578?q=80&w=600&auto=format&fit=crop) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Retailers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Retailers</h3>
                   <div className="bmodel-tagline text-gold">Create Exceptional<br />Store Experiences</div>
@@ -88,7 +88,7 @@ export default function SolutionsPage() {
 
               {/* Wholesalers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Wholesalers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Wholesalers</h3>
                   <div className="bmodel-tagline text-gold">Sell More.<br />Stock Less.</div>
@@ -103,7 +103,7 @@ export default function SolutionsPage() {
 
               {/* Manufacturers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Manufacturers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Manufacturers</h3>
                   <div className="bmodel-tagline text-gold">Control Every Gram.<br />Every Process.</div>
@@ -118,7 +118,7 @@ export default function SolutionsPage() {
 
               {/* Digital Brands */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Digital%20Brands.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Digital Brands</h3>
                   <div className="bmodel-tagline text-gold">Launch Collections<br />Faster.</div>
@@ -225,7 +225,7 @@ export default function SolutionsPage() {
           <div className="container">
             <h3 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '38px', fontFamily: 'Georgia, serif', fontWeight: 400 }}>Powering Established Jewelry Businesses Worldwide</h3>
 
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
+            <div className="logo-strip-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
               {[
                 { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
                 { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
@@ -240,7 +240,7 @@ export default function SolutionsPage() {
                 { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
                 { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
               ].map((logo, i, arr) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
+                <div key={i} className="logo-strip-item" style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
                   <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
                     <img src={logo.src} alt={logo.alt} style={{ maxHeight: '35px', maxWidth: '90px', width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9 }} />
                   </div>
@@ -251,16 +251,9 @@ export default function SolutionsPage() {
               ))}
             </div>
 
-            <div className="responsive-grid-4" style={{
-              paddingTop: '40px',
-              borderTop: '1px solid rgba(255,255,255,0.05)',
-              maxWidth: '1440px',
-              margin: '0 auto',
-              paddingLeft: '40px',
-              paddingRight: '40px'
-            }}>
+            <div className="responsive-grid-4 about-stats-container">
               {/* Stat 1 */}
-              <div className="about-stat" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
+              <div className="about-stat">
                 <div style={{ color: 'var(--accent-gold)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 </div>
@@ -271,7 +264,7 @@ export default function SolutionsPage() {
               </div>
 
               {/* Stat 2 */}
-              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="about-stat has-border">
                 <div style={{ color: 'var(--accent-gold)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 </div>
@@ -282,7 +275,7 @@ export default function SolutionsPage() {
               </div>
 
               {/* Stat 3 */}
-              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="about-stat has-border">
                 <div style={{ color: 'var(--accent-gold)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M6 3h12l4 6-10 12L2 9l4-6z" /><path d="M2 9h20" /><path d="M12 21V9" /><path d="M6 3l6 6" /><path d="M18 3l-6 6" /></svg>
                 </div>
@@ -293,7 +286,7 @@ export default function SolutionsPage() {
               </div>
 
               {/* Stat 4 */}
-              <div className="about-stat has-border" style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center', borderLeft: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="about-stat has-border">
                 <div style={{ color: 'var(--accent-gold)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
                 </div>
@@ -340,39 +333,30 @@ export default function SolutionsPage() {
         {/* 7. Footer CTA */}
         <section className="cta-section section" style={{ padding: '20px 0 120px 0' }}>
           <div className="container" style={{ maxWidth: '1400px' }}>
-            <div style={{
-              display: 'flex',
-              border: '1px solid rgba(237, 139, 22, 0.2)',
-              borderRadius: '12px',
-              backgroundColor: '#050505',
-              overflow: 'hidden',
-              alignItems: 'stretch',
-              position: 'relative',
-              minHeight: '180px'
-            }}>
+            <div className="cta-banner">
               {/* Left Content */}
-              <div style={{ flex: 1, padding: '30px 40px', zIndex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <h2 style={{ fontSize: '30px', fontFamily: 'Georgia, serif', fontWeight: 400, marginBottom: '12px', lineHeight: 1.2, color: '#fff' }}>
+              <div className="cta-banner-content">
+                <h2>
                   Find The Right Solution<br />For Your Jewelry Business
                 </h2>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '13px', lineHeight: 1.5, marginBottom: '20px', maxWidth: '450px' }}>
+                <p>
                   Whether you operate stores, factories, wholesale networks, or digital-first brands, Effission provides the technology foundation to help you grow with confidence.
                 </p>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <Link href="/contact" style={{ backgroundColor: 'var(--accent-gold)', color: '#fff', padding: '10px 20px', borderRadius: '6px', fontWeight: 500, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }} className="hover-scale">
+                <div className="cta-banner-btns">
+                  <Link href="/contact" className="btn btn-gold hover-scale">
                     Book a Strategy Session <span>&rarr;</span>
                   </Link>
-                  <Link href="/contact" style={{ backgroundColor: 'rgba(0,0,0,0.4)', border: '1px solid rgba(237, 139, 22, 0.4)', color: '#fff', padding: '10px 20px', borderRadius: '6px', fontWeight: 500, fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none' }} className="hover-scale">
-                    Explore Platform <span style={{ color: 'var(--accent-gold)' }}>&rarr;</span>
+                  <Link href="#explore" className="btn btn-outline-gold hover-scale">
+                    Explore Platform <span>&rarr;</span>
                   </Link>
                 </div>
               </div>
 
               {/* Right Image */}
-              <div style={{ flex: 1.5, position: 'relative', zIndex: 1 }}>
-                <img src="/images/solutions/platform-bg-4.png" alt="Effission Platform" style={{ width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', right: 0, top: 0, objectPosition: 'center center' }} />
+              <div className="cta-banner-visual">
+                <img src="/images/solutions/platform-bg-4.png" alt="Effission Platform" />
                 {/* Gradient overlay to seamlessly fade the image into the black background on the left */}
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, #050505 0%, transparent 30%)' }}></div>
+                <div className="cta-banner-overlay"></div>
               </div>
             </div>
           </div>
