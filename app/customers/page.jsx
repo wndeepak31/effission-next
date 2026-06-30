@@ -176,7 +176,7 @@ export default function CustomersPage() {
               {/* Card 1 */}
               <div style={{ border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', backgroundColor: '#050505', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ position: 'relative', height: '220px', backgroundColor: '#111' }}>
-                  <img src="/images/customers/Personalization%20At%20Scale1.png" alt="JTV Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
+                  <img src="/images/customers/Personalization%20At%20Scale1.png" alt="JTV Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>JTV (USA)</div>
@@ -198,7 +198,7 @@ export default function CustomersPage() {
               {/* Card 2 */}
               <div style={{ border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', backgroundColor: '#050505', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ position: 'relative', height: '220px', backgroundColor: '#111' }}>
-                  <img src="/images/customers/Connected%20Commerce.png" alt="Malabar Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
+                  <img src="/images/customers/Connected%20Commerce.png" alt="Malabar Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>Malabar Gold & Diamonds</div>
@@ -220,7 +220,7 @@ export default function CustomersPage() {
               {/* Card 3 */}
               <div style={{ border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', backgroundColor: '#050505', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ position: 'relative', height: '220px', backgroundColor: '#111' }}>
-                  <img src="/images/customers/Digital%20First%20Growth.png" alt="Clean Origin Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
+                  <img src="/images/customers/Digital%20First%20Growth.png" alt="Clean Origin Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>Clean Origin (USA)</div>
@@ -242,7 +242,7 @@ export default function CustomersPage() {
               {/* Card 4 */}
               <div style={{ border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', overflow: 'hidden', backgroundColor: '#050505', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ position: 'relative', height: '220px', backgroundColor: '#111' }}>
-                  <img src="/images/customers/Modern%20Operations.png" alt="KBS Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
+                  <img src="/images/customers/Modern%20Operations.png" alt="KBS Mockup" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
                 </div>
                 <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginBottom: '8px' }}>KBS (USA)</div>
@@ -274,8 +274,8 @@ export default function CustomersPage() {
 
               {/* Retailers */}
               <div style={{ position: 'relative', height: '240px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <img src="/images/customers/RETAILES.png" alt="Retailers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
+                <img src="/images/customers/RETAILES.png" alt="Retailers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 60%)' }}>
                   <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '1px solid var(--accent-gold, #ed8b16)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(5px)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                   </div>
@@ -285,8 +285,8 @@ export default function CustomersPage() {
 
               {/* Wholesalers */}
               <div style={{ position: 'relative', height: '240px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <img src="/images/customers/wholesalers.png" alt="Wholesalers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
+                <img src="/images/customers/wholesalers.png" alt="Wholesalers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 60%)' }}>
                   <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '1px solid var(--accent-gold, #ed8b16)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(5px)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                   </div>
@@ -296,8 +296,8 @@ export default function CustomersPage() {
 
               {/* Manufacturers */}
               <div style={{ position: 'relative', height: '240px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <img src="/images/customers/manufacturers.png" alt="Manufacturers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
+                <img src="/images/customers/manufacturers.png" alt="Manufacturers" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 60%)' }}>
                   <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '1px solid var(--accent-gold, #ed8b16)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(5px)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
                   </div>
@@ -307,8 +307,8 @@ export default function CustomersPage() {
 
               {/* Digital Brands */}
               <div style={{ position: 'relative', height: '240px', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                <img src="/images/customers/digital%20brands.png" alt="Digital Brands" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
-                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%)' }}>
+                <img src="/images/customers/digital%20brands.png" alt="Digital Brands" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 60%)' }}>
                   <div style={{ width: '64px', height: '64px', borderRadius: '50%', border: '1px solid var(--accent-gold, #ed8b16)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px', backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(5px)' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold, #ed8b16)" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
                   </div>

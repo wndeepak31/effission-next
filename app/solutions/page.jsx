@@ -73,7 +73,7 @@ export default function SolutionsPage() {
             <div className="bmodel-grid">
               {/* Retailers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Retailers.png) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Retailers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Retailers</h3>
                   <div className="bmodel-tagline text-gold">Create Exceptional<br />Store Experiences</div>
@@ -88,7 +88,7 @@ export default function SolutionsPage() {
 
               {/* Wholesalers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Wholesalers.png) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Wholesalers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Wholesalers</h3>
                   <div className="bmodel-tagline text-gold">Sell More.<br />Stock Less.</div>
@@ -103,7 +103,7 @@ export default function SolutionsPage() {
 
               {/* Manufacturers */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Manufacturers.png) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Manufacturers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Manufacturers</h3>
                   <div className="bmodel-tagline text-gold">Control Every Gram.<br />Every Process.</div>
@@ -118,7 +118,7 @@ export default function SolutionsPage() {
 
               {/* Digital Brands */}
               <div className="bmodel-card glass-effect">
-                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent, var(--bg-secondary)), url(/images/solutions/Digital%20Brands.png) center/cover' }}></div>
+                <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Digital%20Brands.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Digital Brands</h3>
                   <div className="bmodel-tagline text-gold">Launch Collections<br />Faster.</div>
