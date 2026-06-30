@@ -144,9 +144,9 @@ export default function WhoWeServe() {
                 backgroundImage: `url(${card.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                maskImage: 'linear-gradient(to right, transparent 0%, black 80%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 80%)',
-                opacity: 0.6,
+                maskImage: 'linear-gradient(to right, transparent 0%, black 60%)',
+                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 60%)',
+                opacity: 1,
                 zIndex: 0
               }}></div>
 

@@ -213,8 +213,8 @@ export default function PlatformPage() {
                   transition: 'transform 0.3s ease, border-color 0.3s ease'
                 }} className="hover-gold-border hover-scale">
                   <div style={{ width: '45%', position: 'relative', flexShrink: 0 }}>
-                    <img src={item.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, #050505 95%)' }}></div>
+                    <img src={item.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, transparent 70%, #050505 100%)' }}></div>
                   </div>
                   <div style={{ flex: 1, padding: '24px 20px 24px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', zIndex: 1, marginLeft: '-15px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '10px' }}>
@@ -293,8 +293,8 @@ export default function PlatformPage() {
                   transition: 'transform 0.3s ease, border-color 0.3s ease'
                 }} className="hover-gold-border hover-scale">
                   <div style={{ width: '40%', position: 'relative', flexShrink: 0 }}>
-                    <img src={card.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, #050505 95%)' }}></div>
+                    <img src={card.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1 }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 0%, transparent 70%, #050505 100%)' }}></div>
                   </div>
                   <div style={{ flex: 1, padding: '35px 20px 35px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', zIndex: 1, marginLeft: '-15px' }}>
                     <h3 style={{ fontSize: '20px', fontWeight: 500, marginBottom: '24px', fontFamily: 'Georgia, serif', color: '#fff' }}>{card.title}</h3>
