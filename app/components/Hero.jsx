@@ -73,7 +73,7 @@ export default function Hero() {
 
           <div className="hero-visual" style={{ flex: '1.2', display: 'flex', justifyContent: 'flex-end' }}>
             <div className="visual-wrapper" style={{ position: 'relative', width: '100%' }}>
-              <img src="/images/homepage-banner-01.png" alt="Effission Ecosystem" className="visual-img" style={{ filter: 'brightness(1.1) contrast(1.1)', width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/images/banner-02.png" alt="Effission Ecosystem" className="visual-img" style={{ filter: 'brightness(1.1) contrast(1.1)', width: '100%', height: 'auto', display: 'block' }} />
             </div>
           </div>
         </div>
