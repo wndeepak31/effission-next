@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Hero() {
   return (
     <section className="hero" style={{ paddingTop: '100px' }}>
@@ -23,12 +25,12 @@ export default function Hero() {
             </p>
 
             <div className="hero-btns" style={{ marginBottom: '80px', gap: '16px' }}>
-              <a href="#demo" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '8px' }}>
+              <Link href="/contact" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '8px' }}>
                 Book a Demo <span className="arrow" style={{ marginLeft: '4px' }}>→</span>
-              </a>
-              <a href="#platform" className="btn btn-outline" style={{ padding: '14px 28px', borderRadius: '8px', borderColor: 'rgba(255,255,255,0.2)' }}>
+              </Link>
+              <Link href="/platform" className="btn btn-outline" style={{ padding: '14px 28px', borderRadius: '8px', borderColor: 'rgba(255,255,255,0.2)' }}>
                 Explore Platform <span style={{ color: 'var(--accent-gold)', marginLeft: '8px', fontSize: '12px' }}>▷</span>
-              </a>
+              </Link>
             </div>
 
             <div className="hero-stats" style={{ display: 'flex', gap: '30px', alignItems: 'center' }}>

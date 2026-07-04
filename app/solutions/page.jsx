@@ -72,7 +72,7 @@ export default function SolutionsPage() {
 
             <div className="bmodel-grid">
               {/* Retailers */}
-              <div className="bmodel-card glass-effect">
+              <Link href="/solutions/retailers" className="bmodel-card glass-effect" style={{ textDecoration: 'none' }}>
                 <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Retailers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Retailers</h3>
@@ -82,12 +82,12 @@ export default function SolutionsPage() {
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-store inventory</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Loyalty programs</li>
                   </ul>
-                  <Link href="#explore" className="bmodel-link text-gold">Explore Retail Solutions <span style={{ marginLeft: '5px' }}>→</span></Link>
+                  <span className="bmodel-link text-gold">Explore Retail Solutions <span style={{ marginLeft: '5px' }}>→</span></span>
                 </div>
-              </div>
+              </Link>
 
               {/* Wholesalers */}
-              <div className="bmodel-card glass-effect">
+              <Link href="/solutions/wholesalers" className="bmodel-card glass-effect" style={{ textDecoration: 'none' }}>
                 <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Wholesalers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Wholesalers</h3>
@@ -97,12 +97,12 @@ export default function SolutionsPage() {
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Memo management</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Sales productivity</li>
                   </ul>
-                  <Link href="#explore" className="bmodel-link text-gold">Explore Wholesale Solutions <span style={{ marginLeft: '5px' }}>→</span></Link>
+                  <span className="bmodel-link text-gold">Explore Wholesale Solutions <span style={{ marginLeft: '5px' }}>→</span></span>
                 </div>
-              </div>
+              </Link>
 
               {/* Manufacturers */}
-              <div className="bmodel-card glass-effect">
+              <Link href="/solutions/manufacturers" className="bmodel-card glass-effect" style={{ textDecoration: 'none' }}>
                 <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Manufacturers.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Manufacturers</h3>
@@ -112,12 +112,12 @@ export default function SolutionsPage() {
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Costing</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Production planning</li>
                   </ul>
-                  <Link href="#explore" className="bmodel-link text-gold">Explore Manufacturing Solutions <span style={{ marginLeft: '5px' }}>→</span></Link>
+                  <span className="bmodel-link text-gold">Explore Manufacturing Solutions <span style={{ marginLeft: '5px' }}>→</span></span>
                 </div>
-              </div>
+              </Link>
 
               {/* Digital Brands */}
-              <div className="bmodel-card glass-effect">
+              <Link href="/solutions/digital" className="bmodel-card glass-effect" style={{ textDecoration: 'none' }}>
                 <div className="bmodel-img" style={{ background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, var(--bg-secondary) 100%), url(/images/solutions/Digital%20Brands.png) center/cover' }}></div>
                 <div className="bmodel-content">
                   <h3>Digital Brands</h3>
@@ -127,9 +127,9 @@ export default function SolutionsPage() {
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Conversion</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Online growth</li>
                   </ul>
-                  <Link href="#explore" className="bmodel-link text-gold">Explore Digital Brand Solutions <span style={{ marginLeft: '5px' }}>→</span></Link>
+                  <span className="bmodel-link text-gold">Explore Digital Brand Solutions <span style={{ marginLeft: '5px' }}>→</span></span>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </section>
