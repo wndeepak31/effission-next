@@ -346,11 +346,11 @@ export default function AiStudioPage() {
 
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'space-between', height: '100%', flexWrap: 'wrap' }}>
                 {[
-                  { title: "Photoreal Rendering", img: "/images/ai-studio/photoreal%20rendering.png" },
-                  { title: "On-Model Visualization", img: "/images/ai-studio/On-model%20visualization.png" },
-                  { title: "Virtual Inventory", img: "/images/ai-studio/virtual%20inventory.png" },
-                  { title: "Interactive Configurators", img: "/images/ai-studio/interactive%20configurators.png" },
-                  { title: "360° Assets", img: "/images/ai-studio/360%20ASSETS.png" }
+                  { title: "Photoreal Rendering", img: "/images/ai-studio/Photoreal rendering.jpg" },
+                  { title: "On-Model Visualization", img: "/images/ai-studio/On model visualization.jpg" },
+                  { title: "Virtual Inventory", img: "/images/ai-studio/Virtual inventory.jpg" },
+                  { title: "Interactive Configurators", img: "/images/ai-studio/Interactive configurators.jpg" },
+                  { title: "360° Assets", img: "/images/ai-studio/360 Assets.jpg" }
                 ].map((card, idx) => (
                   <div key={idx} style={{
                     flex: '1 1 18%',
@@ -530,10 +530,10 @@ export default function AiStudioPage() {
                   {/* Top Row: 4 cards */}
                   <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', zIndex: 1 }}>
                     {[
-                      { title: "Market Trends", img: "/images/hand-render-1.jpg" },
-                      { title: "Customer Demand", img: "/images/hand-render-2.jpg" },
-                      { title: "Social Signals", img: "/images/hand-render-3.jpg" },
-                      { title: "Search Data", img: "/images/hand-render-4.jpg" },
+                      { title: "Market Trends", img: "/images/ai-studio/Market trands.jpg" },
+                      { title: "Customer Demand", img: "/images/ai-studio/Customer Demand.jpg" },
+                      { title: "Social Signals", img: "/images/ai-studio/Social singnats.jpg" },
+                      { title: "Search Data", img: "/images/ai-studio/Search data.jpg" },
                     ].map((item, idx) => (
                       <div key={idx} style={{ width: '22%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
                         <div style={{ width: '100%', aspectRatio: '1.2', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', overflow: 'hidden', backgroundColor: 'rgba(255,255,255,0.02)' }}>
@@ -563,11 +563,11 @@ export default function AiStudioPage() {
                   {/* Bottom Row: 5 cards */}
                   <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', zIndex: 1 }}>
                     {[
-                      { title: "Collection Recommendations", img: "/images/hand-render-5.jpg" },
-                      { title: "Trending Shapes", img: "/images/hand-render-1.jpg" },
-                      { title: "Trending Stones", img: "/images/hand-render-2.jpg" },
-                      { title: "Trending Metals", img: "/images/hand-render-3.jpg" },
-                      { title: "Launch Opportunities", img: "/images/hand-render-4.jpg" },
+                      { title: "Collection Recommendations", img: "/images/ai-studio/Collection Recommendations.jpg" },
+                      { title: "Trending Shapes", img: "/images/ai-studio/Trending shapes.jpg" },
+                      { title: "Trending Stones", img: "/images/ai-studio/Tranding stone.jpg" },
+                      { title: "Trending Metals", img: "/images/ai-studio/Trending metals.jpg" },
+                      { title: "Launch Opportunities", img: "/images/ai-studio/Launch opportunities.jpg" },
                     ].map((item, idx) => (
                       <div key={idx} style={{ width: '18%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
                         <div style={{ width: '100%', aspectRatio: '1', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '8px', overflow: 'hidden', backgroundColor: 'rgba(255,255,255,0.02)' }}>
