@@ -52,7 +52,7 @@ export default function SolutionsPage() {
 
               <div className="hero-visual" style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div className="visual-wrapper solutions-visual-wrapper">
-                  <img src="/images/solutions/solution-bg-1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
+                  <img src="/images/solutions/solution-bg-v1.png" alt="Effission Intelligence Core Diagram" className="visual-img" style={{ width: '100%', maxWidth: '900px', height: 'auto', objectFit: 'contain' }} />
                 </div>
               </div>
             </div>
