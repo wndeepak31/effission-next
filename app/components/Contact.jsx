@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export default function Contact() {
   return (
     <section id="contact" className="section" style={{ background: 'linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%)' }}>
@@ -13,9 +15,9 @@ export default function Contact() {
             Whether you have a question, an enquiry, or a partnership idea, 
             our team of experts is ready to help you shine.
           </p>
-          <a href="mailto:contact@effission.com" className="btn btn-primary" style={{ padding: '20px 60px', fontSize: '18px' }}>
+          <Link href="/contact" className="btn btn-primary" style={{ padding: '20px 60px', fontSize: '18px', display: 'inline-block', textDecoration: 'none' }}>
             Start a Conversation
-          </a>
+          </Link>
         </div>
       </div>
     </section>
