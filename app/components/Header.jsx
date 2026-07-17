@@ -35,8 +35,13 @@ export default function Header() {
           <li><Link href="/platform" className="nav-item">Platform <ChevronDown /></Link></li>
           <li><Link href="/ai-studio" className="nav-item">AI Studio <ChevronDown /></Link></li>
           <li><Link href="/customers" className="nav-item">Customers <span style={{ fontSize: '8px', marginLeft: '6px', opacity: 0.7, verticalAlign: 'middle' }}>•</span></Link></li>
-          <li><Link href="/company" className="nav-item">Company <ChevronDown /></Link></li>
+          <li><Link href="/company" className="nav-item" onClick={() => setIsMenuOpen(false)}>Company <ChevronDown /></Link></li>
         </ul>
+        <div className="mobile-cta" style={{ marginTop: '40px', display: 'none' }}>
+          <Link href="/contact" className="btn btn-gold" onClick={() => setIsMenuOpen(false)}>
+            Book a Demo
+          </Link>
+        </div>
       </nav>
 
       <div className="header-actions">
