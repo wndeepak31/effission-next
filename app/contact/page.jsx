@@ -36,14 +36,14 @@ export default function ContactPage() {
                       <span style={{ fontSize: '24px' }}>✉️</span>
                       <div>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Sales & Inquiries</p>
-                        <p style={{ fontSize: '16px', fontWeight: '500' }}>hello@effission.com</p>
+                        <p style={{ fontSize: '16px', fontWeight: '500' }}>noreply@effission.com</p>
                       </div>
                     </div>
                     <div className="glass-effect" style={{ padding: '20px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '16px' }}>
                       <span style={{ fontSize: '24px' }}>🎧</span>
                       <div>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Technical Support</p>
-                        <p style={{ fontSize: '16px', fontWeight: '500' }}>support@effission.com</p>
+                        <p style={{ fontSize: '16px', fontWeight: '500' }}>noreply@effission.com</p>
                       </div>
                     </div>
                   </div>
@@ -53,35 +53,40 @@ export default function ContactPage() {
                   <h3 style={{ fontSize: '24px', marginBottom: '20px' }}>Global Offices</h3>
                   <div className="services-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
                     <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
-                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Mumbai (HQ)</h4>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>India</h4>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
-                        Bandra Kurla Complex,<br/>
-                        Mumbai, Maharashtra,<br/>
-                        India
+                        Orient Jewelers & More
                       </p>
                     </div>
                     <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
-                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>New York</h4>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>USA</h4>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
-                        Diamond District,<br/>
-                        5th Ave, New York, NY,<br/>
-                        USA
+                        JTV, Clean Origin,<br/>
+                        KBS, Sparkling Jewelry
                       </p>
                     </div>
                     <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
-                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>London</h4>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Bahrain</h4>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
-                        Hatton Garden,<br/>
-                        London,<br/>
-                        United Kingdom
+                        Al Zain Jewelry
                       </p>
                     </div>
                     <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
-                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Dubai</h4>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Egypt</h4>
                       <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
-                        Gold Souk,<br/>
-                        Deira, Dubai,<br/>
-                        UAE
+                        El-Gaia Jewelry
+                      </p>
+                    </div>
+                    <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Thailand</h4>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
+                        Diamrusa, Paracolor
+                      </p>
+                    </div>
+                    <div className="glass-effect" style={{ padding: '24px', borderRadius: '12px' }}>
+                      <h4 style={{ color: 'var(--accent-gold)', marginBottom: '8px' }}>Nepal</h4>
+                      <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: '1.6' }}>
+                        RB Gems
                       </p>
                     </div>
                   </div>
