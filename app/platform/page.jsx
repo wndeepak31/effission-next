@@ -4,12 +4,31 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import Link from 'next/link';
+import Script from 'next/script';
+
+const platformSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Effission Platform",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Technology Built For Every Jewelry Business Model. Run your entire jewelry business on one platform.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+};
 
 export default function PlatformPage() {
   return (
     <>
       <Header />
-
+      <Script
+        id="platform-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(platformSchema) }}
+      />
       <main className="platform-page" style={{ paddingTop: '60px' }}>
 
         {/* 1. Hero Section */}

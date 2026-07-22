@@ -13,6 +13,13 @@ export default function ContactForm() {
     setErrorMessage('');
 
     const formData = new FormData(e.target);
+    const products = formData.getAll('product');
+    if (products.length === 0) {
+      setStatus('error');
+      setErrorMessage('Please select at least one product.');
+      return;
+    }
+
     const result = await submitContactForm(formData);
 
     if (result.success) {
@@ -55,6 +62,9 @@ export default function ContactForm() {
       )}
 
       <form onSubmit={handleSubmit}>
+        {/* Honeypot field for bot protection */}
+        <input type="text" name="bot_field" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+        
         <div className="form-grid-2">
           <div>
             <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-secondary)', fontSize: '14px' }}>Full Name *</label>
@@ -80,16 +90,15 @@ export default function ContactForm() {
         </div>
 
         <div style={{ marginBottom: '20px' }}>
-          <label style={{ display: 'block', marginBottom: '8px', color: 'var(--text-secondary)', fontSize: '14px' }}>Select Products *</label>
-          <select name="product" required style={{ width: '100%', padding: '14px 16px', background: 'rgba(255,255,255,0.05)', border: '1px solid var(--glass-border)', borderRadius: '8px', color: '#fff', fontSize: '16px', outline: 'none', transition: 'border-color 0.3s ease', cursor: 'pointer' }} onFocus={(e) => e.target.style.borderColor = 'var(--accent-gold)'} onBlur={(e) => e.target.style.borderColor = 'var(--glass-border)'}>
-            <option value="" style={{ color: '#000' }}>Select a product</option>
-            <option value="Effission Retail" style={{ color: '#000' }}>Effission Retail</option>
-            <option value="Effission Wholesale" style={{ color: '#000' }}>Effission Wholesale</option>
-            <option value="Effission Manufacturing" style={{ color: '#000' }}>Effission Manufacturing</option>
-            <option value="Effission Digital Brand" style={{ color: '#000' }}>Effission Digital Brand</option>
-            <option value="AI & Automation Services" style={{ color: '#000' }}>AI & Automation Services</option>
-            <option value="Effission CRM" style={{ color: '#000' }}>Effission CRM</option>
-          </select>
+          <label style={{ display: 'block', marginBottom: '12px', color: 'var(--text-secondary)', fontSize: '14px' }}>Select Products *</label>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+            {['Effission Retail', 'Effission Wholesale', 'Effission Manufacturing', 'Effission Digital Brand', 'AI & Automation Services', 'Effission CRM'].map((prod) => (
+              <label key={prod} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fff', fontSize: '15px', cursor: 'pointer' }}>
+                <input type="checkbox" name="product" value={prod} style={{ accentColor: 'var(--accent-gold)', width: '18px', height: '18px', cursor: 'pointer' }} />
+                {prod}
+              </label>
+            ))}
+          </div>
         </div>
 
         <div style={{ marginBottom: '30px' }}>

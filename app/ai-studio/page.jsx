@@ -5,6 +5,21 @@ import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import Link from 'next/link';
 import React from 'react';
+import Script from 'next/script';
+
+const aiStudioSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Effission AI Studio",
+  "operatingSystem": "Web",
+  "applicationCategory": "BusinessApplication",
+  "description": "Create photoreal jewelry experiences, launch products before manufacturing, and automate business operations through intelligent AI agents.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+};
 
 export default function AiStudioPage() {
   const images = Array.from({ length: 7 }).map((_, i) => `/images/hand-render-${i + 1}.jpg`);
@@ -12,7 +27,11 @@ export default function AiStudioPage() {
   return (
     <>
       <Header />
-
+      <Script
+        id="ai-studio-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aiStudioSchema) }}
+      />
       <main className="ai-studio-page" style={{ paddingTop: '60px' }}>
 
         {/* 1. Hero Section */}

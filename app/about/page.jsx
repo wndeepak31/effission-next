@@ -1,28 +1,46 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Footprint from '../components/Footprint';
+import Script from 'next/script';
 
 export const metadata = {
-  title: 'About Us - Effission',
-  description: 'Learn about Effission, our vision, and our dedication to the luxury jewelry sector.'
+  title: 'About Us | Effission - Jewelry Software Innovators',
+  description: 'Learn about Effission, our vision, and our dedication to the luxury jewelry sector. We provide cutting-edge enterprise software, 3D visualization, and web development.',
+  keywords: 'Effission about, jewelry software company, 3D visualization jewelry, luxury jewelry tech',
+  alternates: {
+    canonical: 'https://www.effission.com/about'
+  }
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Effission",
+  "description": "Effission merges the timeless elegance of fine jewelry with the cutting edge of digital innovation.",
+  "url": "https://www.effission.com/about"
 };
 
 export default function AboutPage() {
   return (
     <>
       <Header />
+      <Script
+        id="about-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
         {/* Hero Section */}
         <section className="section" style={{ paddingBottom: '40px' }}>
-          <div className="container">
-            <div className="section-header" style={{ marginBottom: '60px' }}>
+          <article className="container">
+            <header className="section-header" style={{ marginBottom: '60px' }}>
               <span className="section-label">Our Story</span>
               <h1 className="section-title">Redefining Jewelry Technology</h1>
               <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-secondary)', fontSize: '18px' }}>
-                At Effission, we merge the timeless elegance of fine jewelry with the cutting edge of digital innovation. We are dedicated to providing the high-end jewelry market with unparalleled enterprise software, 3D visualization, and web development.
+                <strong>What is Effission?</strong> Effission merges the timeless elegance of fine jewelry with the cutting edge of digital innovation. We are dedicated to providing the high-end jewelry market with unparalleled enterprise software, 3D visualization, and web development.
               </p>
-            </div>
-          </div>
+            </header>
+          </article>
         </section>
 
         {/* Vision & Mission Split */}
