@@ -312,7 +312,7 @@
 
   .valueVisual {
     min-height: 400px;
-    transform: scale(0.7);
+    transform: scale(0.55);
   }
 
   /* Layout Overrides */

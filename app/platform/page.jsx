@@ -337,7 +337,7 @@ export default function PlatformPage() {
 
         {/* 5. Core Diagrams */}
         {/* 5. Core Diagrams */}
-        <section className="core-diagrams section" style={{ padding: '0 0 60px 0' }}>
+        <section className="core-diagrams section" style={{ padding: '0 0 30px 0' }}>
           <div className="container" style={{ maxWidth: '1400px' }}>
             <div style={{
               display: 'flex',
@@ -345,15 +345,13 @@ export default function PlatformPage() {
               flexWrap: 'wrap'
             }}>
               {/* Left Box: Customer Growth Engine */}
-              <div style={{
+              <div className="responsive-flex-row" style={{
                 flex: 1.4,
-                minWidth: '450px',
+                minWidth: 'min(100%, 450px)',
                 border: '1px solid rgba(237, 139, 22, 0.2)',
                 borderRadius: '12px',
                 backgroundColor: '#050505',
                 padding: '25px 30px',
-                display: 'flex',
-                alignItems: 'center',
                 gap: '20px'
               }}>
                 <div style={{ flex: 1.8, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -386,7 +384,7 @@ export default function PlatformPage() {
               {/* Right Box: Unified Data Foundation */}
               <div style={{
                 flex: 1,
-                minWidth: '350px',
+                minWidth: 'min(100%, 350px)',
                 border: '1px solid rgba(237, 139, 22, 0.2)',
                 borderRadius: '12px',
                 backgroundColor: '#050505',
