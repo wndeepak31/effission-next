@@ -25,11 +25,11 @@ export default function Hero() {
             </p>
 
             <div className="hero-btns" style={{ marginBottom: '80px', gap: '16px' }}>
-              <Link href="/contact" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '8px' }}>
+              {/* <Link href="/contact" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '8px' }}>
                 Book a Demo <span className="arrow" style={{ marginLeft: '4px' }}>→</span>
-              </Link>
-              <Link href="/platform" className="btn btn-outline" style={{ padding: '14px 28px', borderRadius: '8px', borderColor: 'rgba(255,255,255,0.2)' }}>
-                Explore Platform <span style={{ color: 'var(--accent-gold)', marginLeft: '8px', fontSize: '12px' }}>▷</span>
+              </Link> */}
+              <Link href="/platform" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '8px', borderColor: 'rgba(255,255,255,0.2)' }}>
+                Explore Platform <span className="arrow" style={{ marginLeft: '4px' }}>→</span>
               </Link>
             </div>
 
