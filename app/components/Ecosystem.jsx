@@ -154,17 +154,20 @@ export default function Ecosystem() {
             pointerEvents: 'none'
           }}></div>
           
-          <img 
-            src="/images/ecosystem.png" 
-            alt="Effission Intelligence Ecosystem" 
-            style={{ 
-              maxWidth: '100%', 
-              height: 'auto', 
-              position: 'relative',
-              zIndex: 1,
-              animation: 'float 6s ease-in-out infinite' 
-            }} 
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet="/images/ecosystem-mob.png" />
+            <img 
+              src="/images/ecosystem.png" 
+              alt="Effission Intelligence Ecosystem" 
+              style={{ 
+                maxWidth: '100%', 
+                height: 'auto', 
+                position: 'relative',
+                zIndex: 1,
+                animation: 'float 6s ease-in-out infinite' 
+              }} 
+            />
+          </picture>
         </div>
 
         {/* 4 Layers Grid */}
