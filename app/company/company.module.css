@@ -140,6 +140,13 @@
   margin-top: 12px;
 }
 
+.labelTop {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+}
+
 /* Hero */
 .heroLayout {
   display: flex;
