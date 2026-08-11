@@ -76,7 +76,7 @@ export default function Hero() {
           <div className="hero-visual" style={{ flex: '1.2', display: 'flex', justifyContent: 'flex-end' }}>
             <div className="visual-wrapper" style={{ position: 'relative', width: '100%' }}>
               <picture>
-                <source media="(max-width: 767px)" srcSet="/images/ecosystem-mob.png" />
+                <source media="(max-width: 767px)" srcSet="/images/banner-02-mob.png" />
                 <img src="/images/banner-02.png" alt="Effission Ecosystem" className="visual-img" style={{ filter: 'brightness(1.1) contrast(1.1)', width: '100%', height: 'auto', display: 'block' }} />
               </picture>
             </div>
