@@ -167,7 +167,7 @@ export default function CompanyPage() {
                       <path d="M10 14l-2 4h12l-2-4H10z" /><path d="M13 8l-2 4h6l-2-4h-6z" /><path d="M7 16l-2 4h14l-2-4H7z" />
                     </svg>
                   </div>
-                  <span className={`${styles.nodeLabel} ${styles.labelBottom}`}>Gold</span>
+                  <span className={`${styles.nodeLabel} ${styles.labelTop}`}>Gold</span>
                 </div>
 
                 {/* Top-Right: Diamonds */}
