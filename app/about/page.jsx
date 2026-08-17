@@ -29,12 +29,12 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
-      <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
+      <main className="about-main-spacing" style={{ paddingTop: '100px', minHeight: '100vh' }}>
         {/* Hero Section */}
         <section className="section" style={{ paddingBottom: '40px' }}>
           <article className="container">
-            <header className="section-header" style={{ marginBottom: '60px' }}>
-              <span className="section-label">Our Story</span>
+            <header className="section-header about-header-spacing" style={{ marginBottom: '60px' }}>
+              <span className="section-label" style={{ color: 'var(--accent-gold)' }}>Our Story</span>
               <h1 className="section-title">Redefining Jewelry Technology</h1>
               <p style={{ maxWidth: '700px', margin: '0 auto', color: 'var(--text-secondary)', fontSize: '18px' }}>
                 <strong>What is Effission?</strong> Effission merges the timeless elegance of fine jewelry with the cutting edge of digital innovation. We are dedicated to providing the high-end jewelry market with unparalleled enterprise software, 3D visualization, and web development.
@@ -47,24 +47,24 @@ export default function AboutPage() {
         <section className="section" style={{ background: 'rgba(255,255,255,0.02)' }}>
           <div className="container">
             <div className="process-split" style={{ alignItems: 'center', marginBottom: 0 }}>
-                <div className="process-split-content">
-                  <h2 style={{ fontSize: '32px', marginBottom: '24px' }}>Our Mission</h2>
-                  <p style={{ color: 'var(--text-secondary)', marginBottom: '30px', fontSize: '18px' }}>
-                    To empower jewelry brands with intelligent digital tools that enhance operations, elevate the customer experience, and capture the true brilliance of their craftsmanship online.
-                  </p>
-                  
-                  <h2 style={{ fontSize: '32px', marginBottom: '24px' }}>Our Vision</h2>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '18px' }}>
-                    We envision a future where technology and luxury are seamlessly integrated—where every jeweler can offer a bespoke, studio-quality digital experience without compromising on security or scale.
-                  </p>
-                </div>
-                <div className="process-split-visual" style={{ background: 'url(/images/jewelry_global_tech.png) center/cover no-repeat', minHeight: '400px', borderRadius: '16px' }}></div>
+              <div className="process-split-content">
+                <h2 style={{ fontSize: '32px', marginBottom: '24px' }}>Our Mission</h2>
+                <p style={{ color: 'var(--text-secondary)', marginBottom: '30px', fontSize: '18px' }}>
+                  To empower jewelry brands with intelligent digital tools that enhance operations, elevate the customer experience, and capture the true brilliance of their craftsmanship online.
+                </p>
+
+                <h2 style={{ fontSize: '32px', marginBottom: '24px' }}>Our Vision</h2>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '18px' }}>
+                  We envision a future where technology and luxury are seamlessly integrated—where every jeweler can offer a bespoke, studio-quality digital experience without compromising on security or scale.
+                </p>
+              </div>
+              <div className="process-split-visual" style={{ background: 'url(/images/about_jewelry_tech.png) center/cover no-repeat', minHeight: '400px', borderRadius: '16px', width: '100%' }}></div>
             </div>
           </div>
         </section>
 
         {/* Values Grid */}
-        <section className="section">
+        <section className="section section-padding-lg">
           <div className="container">
             <h2 style={{ textAlign: 'center', marginBottom: '50px', fontSize: '32px' }}>Our Core Values</h2>
             <div className="services-grid">
@@ -88,7 +88,7 @@ export default function AboutPage() {
         </section>
 
         {/* Global Footprint */}
-        <div style={{ marginTop: '40px', marginBottom: '80px' }}>
+        <div className="footprint-spacing" style={{ marginTop: '40px', marginBottom: '80px' }}>
           <Footprint />
         </div>
 

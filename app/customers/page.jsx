@@ -31,9 +31,6 @@ export default function CustomersPage() {
                   <Link href="#stories" className={`btn btn-gold ${styles.ctaBtn}`} style={{ padding: '14px 28px', borderRadius: '6px' }}>
                     View Success Stories <span style={{ marginLeft: '8px' }}>→</span>
                   </Link>
-                  <Link href="/contact" className={`btn btn-outline-gold ${styles.ctaBtn}`} style={{ padding: '14px 28px', borderRadius: '6px', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
-                    Book a Demo <span style={{ marginLeft: '8px' }}>→</span>
-                  </Link>
                 </div>
               </div>
 
@@ -330,9 +327,6 @@ export default function CustomersPage() {
                 <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '15px', lineHeight: 1.6, marginBottom: '40px' }}>
                   Effission powers jewelry businesses across the globe.
                 </p>
-                <Link href="#" style={{ border: '1px solid var(--accent-gold, #ed8b16)', color: '#fff', padding: '12px 24px', borderRadius: '6px', fontSize: '14px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center' }}>
-                  Explore Our Global Presence <span style={{ marginLeft: '8px' }}>→</span>
-                </Link>
               </div>
 
               {/* Map */}

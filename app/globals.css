@@ -285,8 +285,12 @@ ul {
 }
 
 @media (max-width: 1024px) {
+  main>section:first-child {
+    padding-top: 20px !important;
+  }
+
   .hero-split {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
 
@@ -638,6 +642,7 @@ ul {
 
 /* Hide mobile menu elements on desktop */
 @media (min-width: 1025px) {
+
   .mobile-menu-footer,
   .mobile-nav-logo,
   .menu-ambient-glow {
@@ -663,7 +668,8 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 130px; /* Reduced gap between logo and links */
+    padding-top: 130px;
+    /* Reduced gap between logo and links */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
@@ -680,7 +686,8 @@ ul {
   .mobile-nav-logo {
     position: absolute;
     top: 30px;
-    left: 30px; /* Aligned with standard padding */
+    left: 30px;
+    /* Aligned with standard padding */
     opacity: 0;
     transform: translateY(-20px);
     transition: all 0.4s ease;
@@ -715,11 +722,25 @@ ul {
     transform: translateY(0);
   }
 
-  .nav.mobile-active .nav-links li:nth-child(1) { transition-delay: 0.1s; }
-  .nav.mobile-active .nav-links li:nth-child(2) { transition-delay: 0.15s; }
-  .nav.mobile-active .nav-links li:nth-child(3) { transition-delay: 0.2s; }
-  .nav.mobile-active .nav-links li:nth-child(4) { transition-delay: 0.25s; }
-  .nav.mobile-active .nav-links li:nth-child(5) { transition-delay: 0.3s; }
+  .nav.mobile-active .nav-links li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav.mobile-active .nav-links li:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .nav.mobile-active .nav-links li:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .nav.mobile-active .nav-links li:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+
+  .nav.mobile-active .nav-links li:nth-child(5) {
+    transition-delay: 0.3s;
+  }
 
   .nav-links a {
     font-size: 28px;
@@ -728,7 +749,7 @@ ul {
     position: relative;
     display: inline-block;
   }
-  
+
   .nav-links a::after {
     content: '';
     position: absolute;
@@ -774,7 +795,8 @@ ul {
   }
 
   .nav.mobile-active .menu-ambient-glow {
-    opacity: 0.2; /* Subtly bright */
+    opacity: 0.2;
+    /* Subtly bright */
   }
 
   .glow-primary {
@@ -1632,6 +1654,10 @@ ul {
     flex-direction: column;
   }
 
+  .challenges-solution {
+    margin: 0 auto;
+  }
+
   .why-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1713,15 +1739,26 @@ ul {
 }
 
 @media (max-width: 767px) {
+  .about-stats-container.responsive-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
   .about-stats-container {
     padding-left: 20px;
     padding-right: 20px;
   }
 
+  .about-stat {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 12px !important;
+  }
+
   .about-stat.has-border {
-    border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
+    border-left: none !important;
+    border-top: none;
+    padding-top: 0;
   }
 }
 
@@ -1851,19 +1888,27 @@ ul {
 
 /* Platform Process Flow */
 @media (max-width: 1024px) {
+
+  /* Global Mobile Horizontal Scrollbar Indication */
+  ::-webkit-scrollbar:horizontal {
+    height: 4px;
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-scrollbar-track:horizontal {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(237, 139, 22, 0.6);
+    border-radius: 4px;
+  }
+
   .process-flow-container {
     overflow-x: auto;
     padding-bottom: 20px;
     justify-content: flex-start !important;
-  }
-
-  .process-flow-container::-webkit-scrollbar {
-    height: 4px;
-  }
-
-  .process-flow-container::-webkit-scrollbar-thumb {
-    background: rgba(237, 139, 22, 0.4);
-    border-radius: 4px;
   }
 
   .process-flow-step {
@@ -1884,13 +1929,43 @@ ul {
     flex: 0 0 auto !important;
     min-width: 110px !important;
   }
+}
 
-  .logo-strip-container::-webkit-scrollbar {
-    height: 4px;
+/* Company Global Impact Grid */
+@media (max-width: 767px) {
+  .company-impact-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
   }
 
-  .logo-strip-container::-webkit-scrollbar-thumb {
-    background: rgba(237, 139, 22, 0.4);
-    border-radius: 4px;
+  .company-impact-grid>.impact-title {
+    grid-column: 1 / -1;
+    padding-right: 0 !important;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .company-impact-stat {
+    border-left: none !important;
+    padding-left: 0 !important;
+    min-width: 0 !important;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* About Page Mobile Spacing Adjustments */
+@media (max-width: 768px) {
+  .about-main-spacing {
+    padding-top: 50px !important;
+  }
+  .about-header-spacing {
+    margin-bottom: 20px !important;
+  }
+  .footprint-spacing {
+    margin-top: 10px !important;
+    margin-bottom: 40px !important;
   }
 }

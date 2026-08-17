@@ -27,10 +27,7 @@ export default function SolutionsPage() {
                   Whether you operate retail stores, wholesale networks, manufacturing facilities, or digital-first brands, Effission adapts to the realities of your business while helping you improve visibility, customer growth, operational control, and profitability.
                 </p>
                 <div className="hero-btns" style={{ marginBottom: '60px', display: 'flex', gap: '16px' }}>
-                  <Link href="/contact" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '6px' }}>
-                    Book a Strategy Session <span className="arrow" style={{ marginLeft: '8px' }}>→</span>
-                  </Link>
-                  <Link href="#platform" className="btn btn-outline-gold" style={{ padding: '14px 28px', borderRadius: '6px', border: '1px solid rgba(237, 139, 22, 0.4)' }}>
+                  <Link href="/platform" className="btn btn-outline-gold" style={{ padding: '14px 28px', borderRadius: '6px', border: '1px solid rgba(237, 139, 22, 0.4)' }}>
                     Explore Platform <span className="arrow" style={{ marginLeft: '8px' }}>→</span>
                   </Link>
                 </div>
@@ -346,7 +343,7 @@ export default function SolutionsPage() {
                   <Link href="/contact" className="btn btn-gold hover-scale">
                     Book a Strategy Session <span>&rarr;</span>
                   </Link>
-                  <Link href="#explore" className="btn btn-outline-gold hover-scale">
+                  <Link href="/platform" className="btn btn-outline-gold hover-scale">
                     Explore Platform <span>&rarr;</span>
                   </Link>
                 </div>
