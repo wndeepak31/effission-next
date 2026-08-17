@@ -222,30 +222,43 @@ export default function SolutionsPage() {
           <div className="container">
             <h3 style={{ textAlign: 'center', marginBottom: '40px', fontSize: '38px', fontFamily: 'Georgia, serif', fontWeight: 400 }}>Powering Established Jewelry Businesses Worldwide</h3>
 
-            <div className="logo-strip-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0', marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 10px', overflow: 'hidden' }}>
-              {[
-                { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
-                { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
-                { src: '/images/brand-logo/clean-origin.png', alt: 'Clean Origin' },
-                { src: '/images/brand-logo/disney.png', alt: 'Disney Fine Jewelry' },
-                { src: '/images/brand-logo/bapalal-2.png', alt: 'Bapalal Keshavlal' },
-                { src: '/images/brand-logo/kbs.png', alt: 'KBS' },
-                { src: '/images/brand-logo/alzain.png', alt: 'El Zain' },
-                { src: '/images/brand-logo/irasva.png', alt: 'Irasva' },
-                { src: '/images/brand-logo/diamrusa.png', alt: 'Diamrusa' },
-                { src: '/images/brand-logo/orient.png', alt: 'Orient' },
-                { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
-                { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
-              ].map((logo, i, arr) => (
-                <div key={i} className="logo-strip-item" style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-                  <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 8px' }}>
-                    <img src={logo.src} alt={logo.alt} style={{ maxHeight: '35px', maxWidth: '90px', width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9 }} />
+            <div className="logo-marquee-container" style={{ marginBottom: '60px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '20px 0' }}>
+              <div className="logo-marquee-track">
+                {[...[
+                  { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
+                  { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
+                  { src: '/images/brand-logo/clean-origin.png', alt: 'Clean Origin' },
+                  { src: '/images/brand-logo/disney.png', alt: 'Disney Fine Jewelry' },
+                  { src: '/images/brand-logo/bapalal-2.png', alt: 'Bapalal Keshavlal' },
+                  { src: '/images/brand-logo/kbs.png', alt: 'KBS' },
+                  { src: '/images/brand-logo/alzain.png', alt: 'El Zain' },
+                  { src: '/images/brand-logo/irasva.png', alt: 'Irasva' },
+                  { src: '/images/brand-logo/diamrusa.png', alt: 'Diamrusa' },
+                  { src: '/images/brand-logo/orient.png', alt: 'Orient' },
+                  { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
+                  { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
+                ], ...[
+                  { src: '/images/brand-logo/jtv.png', alt: 'JTV' },
+                  { src: '/images/brand-logo/malabar.png', alt: 'Malabar' },
+                  { src: '/images/brand-logo/clean-origin.png', alt: 'Clean Origin' },
+                  { src: '/images/brand-logo/disney.png', alt: 'Disney Fine Jewelry' },
+                  { src: '/images/brand-logo/bapalal-2.png', alt: 'Bapalal Keshavlal' },
+                  { src: '/images/brand-logo/kbs.png', alt: 'KBS' },
+                  { src: '/images/brand-logo/alzain.png', alt: 'El Zain' },
+                  { src: '/images/brand-logo/irasva.png', alt: 'Irasva' },
+                  { src: '/images/brand-logo/diamrusa.png', alt: 'Diamrusa' },
+                  { src: '/images/brand-logo/orient.png', alt: 'Orient' },
+                  { src: '/images/brand-logo/sparkling.png', alt: 'Sparkling' },
+                  { src: '/images/brand-logo/resance.png', alt: 'Renaissance' },
+                ]].map((logo, i, arr) => (
+                  <div key={i} className="logo-marquee-item">
+                    <img src={logo.src} alt={logo.alt} style={{ maxHeight: '35px', maxWidth: '110px', width: 'auto', height: 'auto', objectFit: 'contain', opacity: 0.9 }} />
+                    {i < arr.length - 1 && (
+                      <div style={{ width: '1px', height: '30px', background: 'linear-gradient(180deg, transparent, rgba(255,255,255,0.15), transparent)', position: 'absolute', right: 0 }}></div>
+                    )}
                   </div>
-                  {i < arr.length - 1 && (
-                    <div style={{ width: '1px', height: '30px', background: 'linear-gradient(180deg, transparent, rgba(255,255,255,0.15), transparent)', flexShrink: 0 }}></div>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             <div className="responsive-grid-4 about-stats-container">
