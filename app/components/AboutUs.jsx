@@ -106,13 +106,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            {/* Pagination Dots */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
-              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-gold)' }}></div>
-              {[1,2,3,4,5,6].map(i => (
-                <div key={i} style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'rgba(255,255,255,0.3)' }}></div>
-              ))}
-            </div>
+
 
             {/* Bottom Carousel */}
             <div className="logo-carousel-container" style={containerStyle}>

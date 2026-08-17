@@ -28,9 +28,6 @@ export default function CompanyPage() {
                   and grow with confidence.
                 </p>
                 <div className={styles.heroButtons}>
-                  <Link href="/contact" className={`btn btn-gold ${styles.ctaBtn}`} style={{ padding: '14px 28px', borderRadius: '6px' }}>
-                    Book A Strategy Session <span style={{ marginLeft: '8px' }}>→</span>
-                  </Link>
                   <Link href="/platform" className={`btn btn-outline-gold ${styles.ctaBtn}`} style={{ padding: '14px 28px', borderRadius: '6px', border: '1px solid rgba(255, 255, 255, 0.2)' }}>
                     Explore The Platform <span style={{ marginLeft: '8px', color: 'var(--accent-gold, #ed8b16)' }}>→</span>
                   </Link>
@@ -248,7 +245,7 @@ export default function CompanyPage() {
         {/* 4. Global Impact Section */}
         <section className={styles.section} style={{ position: 'relative', zIndex: 1 }}>
           <div className={styles.wideContainer}>
-            <div className={styles.impactContainer} style={{
+            <div className={`company-impact-grid ${styles.impactContainer}`} style={{
               width: '100%',
               border: '1px solid rgba(255, 255, 255, 0.08)',
               borderRadius: '12px',
@@ -261,7 +258,7 @@ export default function CompanyPage() {
               flexWrap: 'wrap'
             }}>
               {/* Column 1: Title */}
-              <div style={{
+              <div className="impact-title" style={{
                 color: 'var(--accent-gold, #ed8b16)',
                 fontSize: '13px',
                 fontWeight: 600,
@@ -273,7 +270,7 @@ export default function CompanyPage() {
               </div>
 
               {/* Stat 1 */}
-              <div className={styles.impactStat} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '200px' }}>
+              <div className={`company-impact-stat ${styles.impactStat}`} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '150px' }}>
                 <div style={{ color: 'var(--accent-gold, #ed8b16)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                 </div>
@@ -284,7 +281,7 @@ export default function CompanyPage() {
               </div>
 
               {/* Stat 2 */}
-              <div className={styles.impactStat} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '200px' }}>
+              <div className={`company-impact-stat ${styles.impactStat}`} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '150px' }}>
                 <div style={{ color: 'var(--accent-gold, #ed8b16)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 </div>
@@ -295,7 +292,7 @@ export default function CompanyPage() {
               </div>
 
               {/* Stat 3 */}
-              <div className={styles.impactStat} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '200px' }}>
+              <div className={`company-impact-stat ${styles.impactStat}`} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '150px' }}>
                 <div style={{ color: 'var(--accent-gold, #ed8b16)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
@@ -312,7 +309,7 @@ export default function CompanyPage() {
               </div>
 
               {/* Stat 4 */}
-              <div className={styles.impactStat} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '200px' }}>
+              <div className={`company-impact-stat ${styles.impactStat}`} style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingLeft: '24px', borderLeft: '1px solid rgba(255,255,255,0.05)', flex: 1, minWidth: '150px' }}>
                 <div style={{ color: 'var(--accent-gold, #ed8b16)' }}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
                 </div>

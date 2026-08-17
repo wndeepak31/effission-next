@@ -48,14 +48,7 @@ export default function AiStudioPage() {
                 <p className="hero-desc" style={{ marginBottom: '40px', fontSize: '16px', lineHeight: 1.7, opacity: 0.8, maxWidth: '480px' }}>
                   Create photoreal jewelry experiences, launch products before manufacturing, and automate business operations through intelligent AI agents working across your entire jewelry ecosystem.
                 </p>
-                <div className="hero-btns" style={{ marginBottom: '60px', display: 'flex', gap: '16px' }}>
-                  <Link href="/contact" className="btn btn-gold" style={{ padding: '14px 28px', borderRadius: '6px' }}>
-                    Explore AI Commerce <span className="arrow" style={{ marginLeft: '8px' }}>→</span>
-                  </Link>
-                  <Link href="#agentic-ai" className="btn btn-outline-gold" style={{ padding: '14px 28px', borderRadius: '6px', border: '1px solid rgba(237, 139, 22, 0.4)' }}>
-                    Explore Agentic AI <span className="arrow" style={{ marginLeft: '8px' }}>→</span>
-                  </Link>
-                </div>
+
               </div>
 
               <div className="hero-visual" style={{ flex: 1.5, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -258,7 +251,7 @@ export default function AiStudioPage() {
                   font-size: clamp(14px, 4vw, 24px) !important;
                 }
                 .hero-split {
-                  flex-direction: column !important;
+                  flex-direction: column-reverse !important;
                 }
                 .hero-visual .visual-wrapper {
                   width: 100% !important;
@@ -703,7 +696,6 @@ export default function AiStudioPage() {
               justifyContent: 'center',
               gap: '24px'
             }}>
-              <span style={{ color: 'var(--accent-gold)', fontSize: '90px', fontFamily: 'Georgia, serif', lineHeight: 0.8, opacity: 0.5, marginTop: '-10px' }}>&ldquo;</span>
               <h2 style={{
                 margin: 0,
                 fontSize: '30px',
